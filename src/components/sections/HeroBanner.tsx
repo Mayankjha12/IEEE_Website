@@ -6,7 +6,6 @@ import { useRef } from "react";
 import { TextRise } from "../custom/TextRise";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import { Heading, Paragraph } from "../includes/TypoGraphy";
-import { joinNowLink } from "../includes/Header";
 import { Button } from "../ui/button";
 
 const MotionButton = motion(Button);
