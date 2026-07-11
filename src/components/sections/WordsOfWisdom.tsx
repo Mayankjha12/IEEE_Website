@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { TextRise } from "../custom/TextRise";
-import { GridBackground } from "../custom/GridBackground";
 import { Heading, Paragraph } from "../includes/TypoGraphy";
 
 // Add / edit mentors here. Each entry becomes one flip card.
@@ -67,9 +66,6 @@ function FlipCard({
           <span className="mt-2 rounded-full border border-cyan-400/30 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-cyan-300">
             {person.role}
           </span>
-          <p className="mt-4 line-clamp-3 text-sm text-white/60">
-            &ldquo;{person.quote}&rdquo;
-          </p>
           <span className="mt-auto flex items-center gap-1.5 pt-4 font-mono text-[10px] uppercase tracking-widest text-white/30">
             hover to flip
           </span>
@@ -93,7 +89,19 @@ function FlipCard({
 export default function WordsOfWisdom() {
   return (
     <section className="relative overflow-hidden bg-black px-4 py-16 md:px-8">
-      <GridBackground className="opacity-40 [mask-image:radial-gradient(ellipse_60%_60%_at_50%_30%,black_40%,transparent_90%)]" />
+      {/* dot-grid background */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-40"
+        style={{
+          backgroundImage:
+            "radial-gradient(rgba(103,232,249,0.35) 1px, transparent 1px)",
+          backgroundSize: "28px 28px",
+          maskImage:
+            "radial-gradient(ellipse 70% 60% at 50% 30%, black 40%, transparent 90%)",
+          WebkitMaskImage:
+            "radial-gradient(ellipse 70% 60% at 50% 30%, black 40%, transparent 90%)",
+        }}
+      />
 
       <div className="relative z-10 mx-auto max-w-6xl">
         <div className="mb-10 flex flex-col items-center md:mb-14">
