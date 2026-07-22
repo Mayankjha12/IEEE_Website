@@ -1,163 +1,223 @@
 "use client";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
+
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
-import { TextRise } from "../custom/TextRise";
-import { useIsMobile } from "@/hooks/useIsMobile";
-import { Heading, Paragraph } from "../includes/TypoGraphy";
-import { joinNowLink } from "../includes/Header";
 import { Button } from "../ui/button";
 
-const MotionButton = motion(Button);
+const MotionButton = motion.create(Button);
+const MotionImage = motion.create(Image);
+
+
+const wordVariant = {
+  hidden: {
+    opacity: 0,
+    y: 30,
+  },
+
+  show: (i: number) => ({
+    opacity: 1,
+    y: 0,
+
+    transition: {
+      delay: i * 0.2,
+      duration: 0.7,
+      ease: "easeOut",
+    },
+  }),
+};
+
 
 export default function HeroBanner() {
+  
+
   const imageContainerRef = useRef<HTMLDivElement>(null);
+
   const isInView = useInView(imageContainerRef, {
     once: true,
     amount: 0.2,
-    margin: "0px 0px -100px 0px",
   });
-  const isMobile = useIsMobile();
-  const aspectRatio = isMobile ? 5 / 4 : 21 / 8;
-
+  const title = "Welcome to IEEE NSUT";
   return (
     <section
-      className="relative w-full py-5 md:py-7 lg:py-8 flex flex-col items-center justify-start overflow-visible font-sans bg-black min-h-[60vh] mt-[56px] md:mt-[100px] lg:mt-[120px]"
-      style={{ fontFamily: "'Poppins', sans-serif" }}
       id="home"
+      className="relative w-full min-h-fit overflow-hidden bg-black pt-44 md:pt-56 pb-16 md:pb-24"
     >
-      <div className="absolute inset-0 w-full h-full -z-10 overflow-hidden">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.2 }}
-          className="absolute inset-0 animate-gradient-x"
-        />
-        <motion.div
-          className="absolute left-0 top-1/3 w-24 h-24 sm:w-36 sm:h-36 bg-[#42a5f5]/20 rounded-full blur-2xl animate-float-slow"
-          animate={{ y: [0, 30, 0], x: [0, 40, 0] }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: [0.42, 0, 0.58, 1],
+      {/* Main Background Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#03040A] via-[#050816] to-[#020308]" />
+
+      {/* Left Glow */}
+      <div className="absolute -left-48 bottom-0 h-[500px] w-[500px] rounded-full bg-blue-700/20 blur-[180px]" />
+
+      {/* Right Glow */}
+      <div className="absolute -right-48 bottom-0 h-[500px] w-[500px] rounded-full bg-blue-700/20 blur-[180px]" />
+
+      {/* Center Glow */}
+      <div className="absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-500/5 blur-[170px]" />
+
+      {/* FIXED: Removed the premature closing tag here so that all internal items center correctly */}
+      <div className="relative z-10 mx-auto flex max-w-6xl flex-col items-center px-4 text-center">
+        
+      
+        <motion.a
+          href="https://www.ieee.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          whileHover={{
+            scale: 1.06,
+            rotate: 2,
           }}
-        />
-        <motion.div
-          className="absolute right-1/4 bottom-1/4 w-14 h-14 sm:w-24 sm:h-24 bg-[#1565c0]/30 rounded-full blur-2xl animate-float-slow"
-          animate={{ y: [0, -20, 0], x: [0, -15, 0] }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: [0.42, 0, 0.58, 1],
-          }}
-        />
-      </div>
-      <div className="w-full max-w-[900px] mx-auto px-2 sm:px-4 md:px-8 lg:px-10 text-center">
-        <div className="bg-black/75 rounded-xl shadow-xl py-4 px-2 sm:px-5 md:px-10 flex flex-col items-center gap-2">
-          <a
-            href="https://www.ieee.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src="/IEEE_logo.svg"
-              alt="IEEE Logo"
-              width={100}
-              height={100}
-              className="w-44 h-24 sm:w-56 sm:h-36 mb-2 mt-6 md:mt-4"
-              priority
-            />
-          </a>
-          <Heading>
-            <TextRise
-              text="Welcome to IEEE NSUT"
-              delay={0.5}
-              perWord
-              duration={1}
-            />
-          </Heading>
-          <Paragraph>
-            At IEEE NSUT, we empower young minds by fostering a culture of
-            collaboration, innovation, and continuous learning, inspiring
-            students to grow, lead, and make meaningful impact.
-          </Paragraph>
-          <MotionButton
-            asChild
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.97 }}
-            className="relative inline-flex items-center justify-center
-    bg-[#23a4fb] text-white 
-    px-6 md:px-8
-    py-3 md:py-3.5
-    text-sm md:text-base 
-    font-semibold 
-    rounded-full 
-    border-2 border-transparent 
-    shadow-md 
-    transition-transform duration-300 ease-in-out 
-    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00bfff] focus-visible:ring-offset-2 
-    max-w-[220px] md:max-w-[260px]
-    overflow-hidden
-    before:absolute before:inset-0 before:rounded-full before:p-[2px] 
-    before:bg-[conic-gradient(from_0deg,_#00bfff,_#23a4fb,_#00bfff)] 
-    before:animate-spin-slow before:z-[-1]"
-            style={{ fontFamily: "Roboto, sans-serif" }}
-          >
-            <a
-              href="https://industrial-ideathon-vjo4um39jvw5x7x.s3.us-east-1.amazonaws.com/statics/IEEE-NSUT-App-beta.apk"
-              download="IEEE-NSUT-App.apk"
-              className="w-full text-center whitespace-nowrap"
+          className="mb-6 block"
+        >
+          <MotionImage
+            src="/IEEE_logo.svg"
+            alt="IEEE Logo"
+            width={180}
+            height={100}
+            priority
+            className="w-44 h-auto sm:w-56 brightness-200 transition-all duration-300"
+          />
+        </motion.a>
+
+        <motion.h1
+          initial="hidden"
+          animate="show"
+          className="flex flex-wrap justify-center text-4xl font-extrabold leading-[1.1] md:text-6xl"
+        >
+          {title.split(" ").map((word, i) => (
+            <motion.span
+              key={i}
+              custom={i}
+              variants={wordVariant}
+              whileHover={{
+                color: "#50A2FF",
+                scale: 1.05,
+              }}
+              className="mr-3 inline-block"
             >
-              Download the IEEE NSUT App
-            </a>
-          </MotionButton>
-        </div>
-      </div>
-      <div className="mt-3 sm:mt-4 md:mt-6 flex flex-col items-center justify-center w-full max-w-[1200px] mx-auto px-1 sm:px-2 md:px-4 lg:px-8">
+              {word}
+            </motion.span>
+          ))}
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 25 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8 }}
+          className="mt-6 max-w-3xl text-center font-sans leading-8 text-gray-400 md:text-lg"
+        >
+          Empowering young minds through collaboration,
+          innovation, and continuous learning—creating a
+          community where students grow, lead, and make
+          an impact.
+        </motion.p>
+
+        <MotionButton
+          asChild
+          initial={{ opacity: 0, y: 25 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1 }}
+          whileHover={{
+            scale: 1.05,
+            boxShadow: "0 0 25px rgba(14,165,233,.45)",
+          }}
+          whileTap={{ scale: 0.96 }}
+          className="mt-5 rounded-full bg-sky-500 px-6 py-3 text-base font-semibold text-white transition-all duration-300 hover:bg-sky-600"
+        >
+          <a
+            href="https://industrial-ideathon-vjo4um39jvw5x7x.s3.us-east-1.amazonaws.com/statics/IEEE-NSUT-App-beta.apk"
+            download="IEEE-NSUT-App.apk"
+          >
+            Download the IEEE NSUT App
+          </a>
+        </MotionButton>
         <motion.div
           ref={imageContainerRef}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          className="relative w-11/12 md:w-full"
+          initial={{
+            opacity: 0,
+            y: 60,
+            scale: 0.96,
+          }}
+          animate={
+            isInView
+              ? {
+                  opacity: 1,
+                  y: 0,
+                  scale: 1,
+                }
+              : {}
+          }
+          transition={{
+            duration: 1,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          className="mt-14 w-full max-w-6xl"
         >
-          <AspectRatio
-            ratio={aspectRatio}
-            className="overflow-hidden rounded-lg sm:rounded-xl md:rounded-2xl shadow-2xl bg-gradient-to-br from-[#0a2540] via-[#1565c0] to-black"
-          >
-            <div className="relative w-full h-full">
-              <motion.div
-                initial={{ scale: 1.08 }}
-                animate={isInView ? { scale: 1 } : { scale: 1.08 }}
-                transition={{ duration: 1.2, ease: [0.42, 0, 0.58, 1] }}
-                className="w-full h-full"
-                style={{ willChange: "transform" }}
-              >
-                <Image
-                  src="/CoreMembers.jpg"
-                  alt="IEEE NSUT Core Members Group Photo"
-                  fill
-                  style={{ objectFit: "cover" }}
-                  className="transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
-                  priority
-                />
-                <motion.div
-                  initial={{ x: "0%" }}
-                  animate={
-                    isInView ? { x: "-100%", zoom: 1 } : { x: "0%", zoom: 1.4 }
-                  }
-                  transition={{ duration: 1.15, ease: [0.42, 0, 0.58, 1] }}
-                  className="absolute top-0 left-0 w-full h-full bg-black z-20"
-                  style={{ pointerEvents: "none" }}
-                />
-              </motion.div>
-            </div>
-          </AspectRatio>
+          <div className="relative aspect-[21/9] overflow-hidden rounded-2xl shadow-[0_25px_80px_rgba(0,0,0,.45)]">
+
+            <Image
+              src="/CoreMembers.jpg"
+              alt="IEEE NSUT Event"
+              width={1800}
+              height={800}
+              priority
+              sizes="(max-width:768px) 100vw, 1200px"
+              className="
+                cursor-zoom-in
+                w-full
+                h-full
+                object-cover
+                object-center
+                scale-[1.18]
+                -translate-y-[8%]
+                transition-all
+                duration-700
+                ease-out
+                hover:scale-[1.22]
+                hover:-translate-y-[9%]
+              "
+            />
+
+            {/* Top Highlight */}
+            <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-transparent pointer-events-none" />
+
+            {/* Bottom Shadow */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent pointer-events-none" />
+
+            <motion.div
+              initial={{ x: "-250%", y: "-10%" }}
+              animate={{ x: "250%", y: "10%" }}
+              transition={{
+                duration: 3.5,
+                repeat: Infinity,
+                repeatDelay: 5,
+                ease: "linear",
+              }}
+              className="absolute inset-0 overflow-hidden pointer-events-none"
+            >
+              <div
+                className="
+                  absolute
+                  top-[-35%]
+                  left-0
+                  h-[180%]
+                  w-32
+                  rotate-[25deg]
+                  bg-gradient-to-r
+                  from-transparent
+                  via-white/20
+                  to-transparent
+                  blur-md
+                "
+              />
+            </motion.div>
+
+          </div>
         </motion.div>
-      </div>
+      </div> 
     </section>
   );
 }

@@ -1,14 +1,14 @@
 "use client";
+
 import { Button } from "@/components/ui/button";
 import { useActiveSection } from "@/hooks/useActiveSection";
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion, Variants } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
-
 
 export const joinNowLink = "https://docs.google.com/forms/d/e/1FAIpQLScqFjGM-Wm7sQPCdjc7n4SRokKWRUHzYh_7rubpiMV5m-W_ig/viewform";
 
@@ -22,104 +22,216 @@ const tabs = [
   { label: "", target: "contact", href: "/" },
 ];
 
-const menuVariants: Variants = {
-  open: {
-    opacity: 1,
-    scale: 1,
-    rotateX: 0,
-    transition: { type: "spring", stiffness: 220, damping: 20 },
-  },
-  closed: {
-    opacity: 0,
-    scale: 0.5,
-    rotateX: -30,
-    transition: { type: "spring", stiffness: 220, damping: 20 },
-  },
-};
-
-const overlayVariants: Variants = {
-  open: { opacity: 1, pointerEvents: "auto" },
-  closed: { opacity: 0, pointerEvents: "none" },
-};
-
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [hoveredTab, setHoveredTab] = useState<string | null>(null);
 
   const sectionIds = tabs.map((tab) => tab.target);
   const activeSection = useActiveSection(sectionIds, 85);
   const pathname = usePathname();
   const isHomePage = pathname === "/";
+
   return (
     <>
-      <nav
-        className={cn(
-          "fixed top-0 left-0 right-0 w-full",
-          "backdrop-blur-md bg-black/80",
-          "flex justify-between items-center px-4 md:px-8 py-4 border-b border-white/10 z-[100] select-none",
-          "overflow-x-hidden"
-        )}
-        style={{
-          fontFamily: "Roboto, sans-serif",
-          filter: "contrast(110%) brightness(105%)",
-        }}
-      >
-        <motion.div
-          className="flex flex-col items-start z-10 shrink-0"
-          layoutId="logo"
+      {/* Floating Glass Container wrapper */}
+      <div className="fixed top-5 left-0 right-0 w-full z-[100] px-4 md:px-8 flex justify-center select-none">
+        <motion.nav
+          initial={{ y: -80, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.19, ease: "easeOut" }}
+          className={cn(
+            "w-full max-w-8xl flex justify-between items-center px-8 py-4 rounded-[24px] transition-all duration-300",
+            " backdrop-blur-xl",
+            "border border-white/10 shadow-[0_0_40px_rgba(59,130,246,0.18),inset_0_1px_1px_rgba(255,255,255,0.15)]"
+          )}
         >
-          <Image
-            src="/logo.png"
-            alt="IEEE Logo"
-            width={100}
-            height={68}
-            className="ml-2 md:ml-5 h-[48px] md:h-[68px] w-auto transition hover:drop-shadow-[0_0_12px_#3aadfb]"
-            priority
-          />
-        </motion.div>
-        {/* Desktop nav */}
-        <div className="ml-1 md:ml-20 flex-1 hidden lg:flex justify-center z-10">
-          <ul className="flex list-none gap-3 md:gap-6 flex-wrap items-center">
-            {tabs.map(
-              (tab, idx) =>
-                tab.label && (
-                  <li key={tab.label} className="relative">
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 1 + idx * 0.2, duration: 0.6 }}
+          {/* Logo with Original Animation & Hover Rotation */}
+          
+          <motion.div
+            className="flex flex-col items-start z-10 shrink-0"
+            layoutId="logo"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            whileHover={{ scale: 1.06, rotate: 4 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Image
+              src="/logo.png"
+              alt="IEEE Logo"
+              width={100}
+              height={68}
+              className="ml-1 h-14 w-auto object-contain"
+              priority
+              
+            />
+          </motion.div>
+
+          {/* Desktop Nav Links with Staggered Entrance */}
+          <div className="flex-1 hidden md:flex justify-center z-10">
+            <ul className="flex list-none gap-2 bg-black border border-cyan-500 px-3 py-2 rounded-full backdrop-blur-md items-center">
+              {tabs.map((tab, idx) => {
+                if (!tab.label) return null;
+                const isActive = activeSection === tab.target;
+                const isTeamOrExternal = tab.target === "team" || !isHomePage;
+
+                const linkElement = isTeamOrExternal ? (
+                  <Link
+                    href={tab.href}
+                    className={cn(
+                      "relative z-10 block px-5 py-2.5 text-[18px] font-semibold rounded-full transition-colors duration-300",
+                      isActive ? "text-[#3DBDFF]" : "text-white/80 hover:text-white"
+                    )}
+                  >
+                    {tab.label}
+                  </Link>
+                ) : (
+                  <ScrollLink
+                    to={tab.target}
+                    spy={true}
+                    smooth={true}
+                    offset={-85}
+                    duration={500}
+                    className={cn(
+                      "relative z-10 block px-5 py-2.5 text-[18px] font-semibold rounded-full transition-colors duration-300 cursor-pointer",
+                      isActive ? "text-[#3DBDFF]" : "text-white/80 hover:text-white"
+                    )}
+                  >
+                    {tab.label}
+                  </ScrollLink>
+                );
+
+                return (
+                  <motion.li
+                    key={tab.label}
+                    className="relative"
+                    initial={{ opacity: 0, y: -15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: idx * 0.08 }}
+                    onMouseEnter={() => setHoveredTab(tab.label)}
+                    onMouseLeave={() => setHoveredTab(null)}
+                  >
+                    {/* Modern Glass Pill Tracker (Stays Unchanged As Requested) */}
+                    {(hoveredTab === tab.label || isActive) && (
+                      <motion.span
+                        layoutId="nav-pill"
+                        className={cn(
+                          "absolute inset-0 rounded-full",
+                          isActive 
+                            ? "bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 shadow-[0_0_12px_rgba(34,211,238,0.2)]" 
+                            : "bg-white/10"
+                        )}
+                        transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                      />
+                    )}
+                    {linkElement}
+                  </motion.li>
+                );
+              })}
+            </ul>
+          </div>
+
+          {/* Action CTA & Mobile Trigger */}
+          <div className="flex items-center gap-4 z-10 shrink-0">
+            <Button
+              asChild
+              className="p-0 bg-transparent hover:bg-transparent shadow-none h-auto border-none hidden lg:inline flex"
+            >
+              <motion.a
+                href={joinNowLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 0 20px rgba(14,165,233,.45)",
+                }}
+                whileTap={{
+                  scale: 0.95,
+                }}
+                className={cn(
+                  "hidden md:inline-flex items-center justify-center bg-sky-500 text-white px-6 py-3 text-lg font-semibold rounded-full border border-white/10 shadow-lg cursor-pointer",
+                  "transition-all duration-300 relative overflow-hidden group"
+                )}
+              >
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/10 to-white/0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
+                Join Now
+              </motion.a>
+            </Button>
+
+            {/* Glass Mobile Hamburger */}
+            <motion.div
+              whileTap={{ scale: 0.9 }}
+              className={cn(
+                "md:hidden flex flex-col gap-1.5 cursor-pointer p-3 border border-white/10 rounded-xl bg-sky-500 text-white transition-all duration-300"
+              )}
+              onClick={() => setMenuOpen(true)}
+              aria-label="Open menu"
+            >
+              <span className="block w-5 h-[2.5px] bg-white rounded" />
+              <span className="block w-5 h-[2.5px] bg-white rounded" />
+              <span className="block w-5 h-[2.5px] bg-white rounded" />
+            </motion.div>
+          </div>
+        </motion.nav>
+      </div>
+
+      {/* Mobile Nav Overlay Menu & Drawer */}
+      <AnimatePresence>
+        {menuOpen && (
+          <>
+            {/* Blended Background Overlay */}
+            <motion.div
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[190]"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              onClick={() => setMenuOpen(false)}
+            />
+
+            {/* Right Sliding Drawer */}
+            <motion.div
+              className="fixed top-0 right-0 h-full w-72 bg-[#111] z-[200] shadow-2xl flex flex-col border-l border-white/5"
+              initial={{ x: 320 }}
+              animate={{ x: 0 }}
+              exit={{ x: 320 }}
+              transition={{
+                type: "spring",
+                stiffness: 260,
+                damping: 25,
+              }}
+            >
+              {/* Close Button Header */}
+              <div className="p-6 border-b border-gray-800 flex justify-end">
+                <motion.button
+                  whileHover={{ rotate: 90 }}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={() => setMenuOpen(false)}
+                  className="bg-sky-500 text-white rounded-xl w-12 h-12 text-3xl flex items-center justify-center font-light"
+                >
+                  &times;
+                </motion.button>
+              </div>
+
+              {/* Side Staggered Drawer Content Links */}
+              <ul className="flex flex-col gap-8 mt-12 px-10 text-white text-xl font-semibold">
+                {tabs.map((tab, index) => {
+                  if (!tab.label) return null;
+                  return (
+                    <motion.li
+                      key={tab.label}
+                      initial={{ opacity: 0, x: 40 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: 40 }}
+                      transition={{ delay: index * 0.1 }}
                     >
-                      {tab.target === "team" || !isHomePage ? (
+                      {tab.href.startsWith("/") && tab.target === "team" || !isHomePage ? (
                         <Link
-                          href={`${tab.href}`}
-                          className={cn(
-                            "group relative inline-block cursor-pointer text-[rgb(207,206,206)] text-[19px] px-2 py-1 transition-colors duration-200",
-                            "hover:text-[#00c8ff] focus:text-[#00ffff]",
-                            activeSection === tab.target
-                              ? "text-[#00ffff] font-bold"
-                              : ""
-                          )}
-                          tabIndex={0}
+                          href={tab.href}
+                          className="hover:text-cyan-400 transition-colors duration-300 block py-1"
+                          onClick={() => setMenuOpen(false)}
                         >
-                          <span className="relative z-10">{tab.label}</span>
-                          <span
-                            aria-hidden
-                            className={cn(
-                              "pointer-events-none absolute left-0 -bottom-[3px] h-[2px] w-full scale-x-0",
-                              "group-hover:scale-x-100 group-focus:scale-x-100 origin-left transition-transform duration-300",
-                              activeSection === tab.target ? "scale-x-100" : ""
-                            )}
-                            style={{
-                              background: "#00ffff",
-                              boxShadow: "0 0 6px #00ffff99",
-                              borderRadius: "999px",
-                            }}
-                          ></span>
-                          <style jsx>{`
-                            .group:hover,
-                            .group:focus {
-                              text-shadow: 0 0 8px #00ffffaa;
-                            }
-                          `}</style>
+                          {tab.label}
                         </Link>
                       ) : (
                         <ScrollLink
@@ -128,234 +240,49 @@ export default function Header() {
                           smooth={true}
                           offset={-85}
                           duration={500}
-                          className={cn(
-                            "group relative inline-block cursor-pointer text-[rgb(207,206,206)] text-[19px] px-2 py-1 transition-colors duration-200",
-                            "hover:text-[#00c8ff] focus:text-[#00ffff]",
-                            activeSection === tab.target
-                              ? "text-[#00ffff] font-bold"
-                              : ""
-                          )}
-                          tabIndex={0}
+                          className="hover:text-cyan-400 transition-colors duration-300 cursor-pointer block py-1"
+                          onClick={() => setMenuOpen(false)}
                         >
-                          <span className="relative z-10">{tab.label}</span>
-                          <span
-                            aria-hidden
-                            className={cn(
-                              "pointer-events-none absolute left-0 -bottom-[3px] h-[2px] w-full scale-x-0",
-                              "group-hover:scale-x-100 group-focus:scale-x-100 origin-left transition-transform duration-300",
-                              activeSection === tab.target ? "scale-x-100" : ""
-                            )}
-                            style={{
-                              background: "#00ffff",
-                              boxShadow: "0 0 6px #00ffff99",
-                              borderRadius: "999px",
-                            }}
-                          ></span>
-                          <style jsx>{`
-                            .group:hover,
-                            .group:focus {
-                              text-shadow: 0 0 8px #00ffffaa;
-                            }
-                          `}</style>
+                          {tab.label}
                         </ScrollLink>
                       )}
-                    </motion.div>
-                  </li>
-                )
-            )}
-          </ul>
-        </div>
-        {/* Desktop join button and mobile menu icon */}
-        <div className="flex items-center gap-3 z-10 shrink-0">
-          <Button
-            className={cn(
-              "hidden md:inline-block bg-[#23a4fb] text-white px-6 py-2 text-base font-semibold rounded-full border-2 border-transparent shadow-none",
-              "transition-all duration-300",
-              "hover:bg-[#158ad6] hover:border-[#00bfff] hover:shadow-[inset_0_0_0_2px_#2c3e50,_0_0_12px_#00bfff,_0_0_4px_#2c3e50] hover:scale-110",
-              "max-w-[180px] overflow-hidden"
-            )}
-            style={{
-              fontFamily: "Roboto, sans-serif",
-            }}
-          >
-            <a href={joinNowLink} target="_blank" rel="noopener noreferrer">
-              Join Now
-            </a>
-          </Button>
-          <div
-            className={cn(
-              "lg:hidden me-4 flex flex-col gap-1.5 cursor-pointer p-2 border border-[#3aadfb] rounded-lg bg-[#3aadfb] shadow",
-              "hover:bg-cyan-100/20 hover:scale-105 transition-all",
-              menuOpen ? "open" : ""
-            )}
-            onClick={() => setMenuOpen((v) => !v)}
-            aria-label="Open menu"
-          >
-            <span
-              className={cn(
-                "block w-[23px] h-[3px] bg-white rounded transition-all duration-300",
-                menuOpen ? "rotate-45 translate-y-[7px]" : ""
-              )}
-            />
-            <span
-              className={cn(
-                "block w-[23px] h-[3px] bg-white rounded transition-all duration-300",
-                menuOpen ? "opacity-0" : ""
-              )}
-            />
-            <span
-              className={cn(
-                "block w-[23px] h-[3px] bg-white rounded transition-all duration-300",
-                menuOpen ? "-rotate-45 -translate-y-[7px]" : ""
-              )}
-            />
-          </div>
-        </div>
-      </nav>
-      {/* Mobile nav */}
-      <AnimatePresence>
-        {menuOpen && (
-          <motion.div
-            className="fixed inset-0 bg-black/20 z-[100] flex justify-end items-start lg:hidden"
-            initial="closed"
-            animate="open"
-            exit="closed"
-            variants={overlayVariants}
-            onClick={(e) => {
-              if ((e.target as HTMLElement).classList.contains("fixed")) {
-                setMenuOpen(false);
-              }
-            }}
-          >
-            <motion.div
-              className="bg-[rgba(20,20,20,0.9)] p-8 rounded-xl mt-24 mr-6 border border-white/10 backdrop-blur-md shadow-2xl"
-              initial="closed"
-              animate="open"
-              exit="closed"
-              variants={menuVariants}
-            >
-              <ul className="flex flex-col gap-5 items-start min-w-[140px]">
-                {tabs.map(
-                  (tab, idx) =>
-                    tab.label && (
-                      <motion.li
-                        key={tab.label}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.1 + idx * 0.1 }}
-                      >
-                        {tab.href.startsWith("/") ? (
-                          <Link
-                            href={tab.href}
-                            className={cn(
-                              "group relative inline-block cursor-pointer text-white text-base py-1 transition-colors duration-200",
-                              "hover:text-[#00ffff] focus:text-[#00ffff]",
-                              activeSection === tab.target
-                                ? "text-[#00ffff] font-bold"
-                                : ""
-                            )}
-                            tabIndex={0}
-                            onClick={() => setMenuOpen(false)}
-                          >
-                            <span className="relative z-10">{tab.label}</span>
-                            <span
-                              aria-hidden
-                              className={cn(
-                                "pointer-events-none absolute left-0 -bottom-1 h-[2px] w-full scale-x-0",
-                                "group-hover:scale-x-100 group-focus:scale-x-100 origin-left transition-transform duration-300",
-                                activeSection === tab.target
-                                  ? "scale-x-100"
-                                  : ""
-                              )}
-                              style={{
-                                background: "#00ffff",
-                                boxShadow: "0 0 6px #00ffff99",
-                                borderRadius: "999px",
-                              }}
-                            ></span>
-                            <style jsx>{`
-                              .group:hover,
-                              .group:focus {
-                                text-shadow: 0 0 8px #00ffffaa;
-                              }
-                            `}</style>
-                          </Link>
-                        ) : (
-                          <ScrollLink
-                            to={tab.target}
-                            spy={true}
-                            smooth={true}
-                            offset={-85}
-                            duration={500}
-                            className={cn(
-                              "group relative inline-block cursor-pointer text-white text-base py-1 transition-colors duration-200",
-                              "hover:text-[#00ffff] focus:text-[#00ffff]",
-                              activeSection === tab.target
-                                ? "text-[#00ffff] font-bold"
-                                : ""
-                            )}
-                            tabIndex={0}
-                            onClick={() => setMenuOpen(false)}
-                          >
-                            <span className="relative z-10">{tab.label}</span>
-                            <span
-                              aria-hidden
-                              className={cn(
-                                "pointer-events-none absolute left-0 -bottom-1 h-[2px] w-full scale-x-0",
-                                "group-hover:scale-x-100 group-focus:scale-x-100 origin-left transition-transform duration-300",
-                                activeSection === tab.target
-                                  ? "scale-x-100"
-                                  : ""
-                              )}
-                              style={{
-                                background: "#00ffff",
-                                boxShadow: "0 0 6px #00ffff99",
-                                borderRadius: "999px",
-                              }}
-                            ></span>
-                            <style jsx>{`
-                              .group:hover,
-                              .group:focus {
-                                text-shadow: 0 0 8px #00ffffaa;
-                              }
-                            `}</style>
-                          </ScrollLink>
-                        )}
-                      </motion.li>
-                    )
-                )}
-                <motion.li
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1 + tabs.length * 0.1 }}
-                  className="w-full"
-                >
-                  <Button
-                    className={cn(
-                      "bg-[#23a4fb] text-[#283848] px-6 py-2 text-sm font-semibold rounded-full border-2 border-transparent transition-all duration-300 animate-pulse w-full mt-2",
-                      "hover:bg-[#158ad6]",
-                      "max-w-full overflow-hidden"
-                    )}
-                    style={{
-                      fontFamily: "Roboto, sans-serif",
-                    }}
-                    onClick={() => setMenuOpen(false)}
-                    asChild
-                  >
-                    <a
-                      href={joinNowLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Join Now
-                    </a>
-                  </Button>
-                </motion.li>
+                    </motion.li>
+                  );
+                })}
               </ul>
+
+              {/* Drawer Bottom CTA Button */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="px-10 mt-12"
+              >
+                <motion.a
+                  href={joinNowLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{
+                    scale: 1.05,
+                    boxShadow: "0 0 20px rgba(14,165,233,.45)",
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-full bg-sky-500 py-3 rounded-full text-lg font-semibold text-white not-italic flex items-center justify-center shadow-md cursor-pointer"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Join Now
+                </motion.a>
+              </motion.div>
             </motion.div>
-          </motion.div>
+          </>
         )}
       </AnimatePresence>
     </>
   );
 }
+
+
+
+
+
+
