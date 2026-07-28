@@ -5,7 +5,7 @@ import ChaptersSection from "@/components/sections/ChaptersSection";
 import FAQASection from "@/components/sections/FAQASection";
 import HeroBanner from "@/components/sections/HeroBanner";
 import LatestEventsSection from "@/components/sections/LatestEventsSection";
-import PastEvents from "@/components/sections/PastEventCard";
+// import PastEvents from "@/components/sections/PastEventCard";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import WordsOfWisdom from "@/components/sections/WordsOfWisdom";
 
@@ -14,7 +14,7 @@ export default async function Page() {
     <LoadingWrapper>
       <div className="flex flex-col items-center justify-center min-h-screen mx-auto overflow-hidden bg-black ">
         <HeroBanner />
-        <PastEvents />
+        {/* <PastEvents /> */}
         <WhyChooseUs />
         <ChaptersSection />
         <LatestEventsSection />
