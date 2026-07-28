@@ -781,8 +781,6 @@ export default function LatestEventsRedesign() {
                                 })}
                             </div>
                         </div>
-
-                        <p style={{ margin: "clamp(10px, 2vw, 18px) auto 0", maxWidth: "min(1240px, 94vw)", padding: "0 clamp(16px,4vw,40px)", textAlign: "center", fontSize: "12.5px", fontWeight: 500, color: "#6e7681" }}>Click any card to explore the full event</p>
                     </section>
                 </main>
             )}
