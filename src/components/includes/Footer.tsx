@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import {
   FaInstagram,
@@ -11,174 +12,174 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
 
 export const whatsAppLink = "https://chat.whatsapp.com/E1MfsiHEDGl7cgwumScIHA";
 
-const linksArr = [
-  {
-    title: "Contact us",
-    links: [
-      // <a
-      //   key="phone"
-      //   href="tel:+919534781286"
-      //   className="hover:text-[#00a8cc] transition"
-      // >
-      //   +91 88264 90096
-      // </a>,
-      <a
-        key="mail"
-        href="mailto:ieeensut@gmail.com"
-        className="hover:text-[#00a8cc] transition"
-      >
-        ieeensut@gmail.com
-      </a>,
-      "NSUT, Sector-3 Dwarka, Delhi",
-    ],
-  },
-  {
-    title: "IEEE Useful Links",
-    links: [
-      <a
-        key="ieee-main"
-        href="https://www.ieee.org/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center gap-1 hover:text-[#00a8cc] transition"
-      >
-        <FaGlobe /> IEEE.org
-      </a>,
-      <a
-        key="ieee-xplore"
-        href="https://ieeexplore.ieee.org/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center gap-1 hover:text-[#00a8cc] transition"
-      >
-        <FaBookOpen /> IEEE Xplore
-      </a>,
-      <a
-        key="ieee-events"
-        href="https://www.ieee.org/conferences/index.html"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center gap-1 hover:text-[#00a8cc] transition"
-      >
-        <FaCalendarAlt /> IEEE Events
-      </a>,
-    ],
-  },
+const usefulLinksData = [
+  { href: "https://www.ieee.org/", label: "IEEE.org", icon: FaGlobe },
+  { href: "https://ieeexplore.ieee.org/", label: "IEEE Xplore", icon: FaBookOpen },
+  { href: "https://www.ieee.org/conferences/index.html", label: "IEEE Events", icon: FaCalendarAlt },
 ];
 
 export default function Footer() {
+  const [email, setEmail] = useState("");
+
   return (
-    <footer className="pb-14 w-full">
-      <div className="w-[90%] max-w-[1440px] mx-auto flex flex-col gap-16 md:gap-10">
+    <footer className="pb-4 w-full">
+      <div className="w-[90%] max-w-[1440px] mx-auto flex flex-col gap-4">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="flex flex-col pt-12 pb-0 gap-12"
+          className="flex flex-col items-center pt-4 gap-3 text-center"
         >
-          <div className="flex flex-col md:flex-row justify-between w-full gap-8">
-            {/* Logo and text side by side, socials below on mobile, side on desktop */}
-            <div
-              className={cn(
-                "flex flex-col md:flex-row md:items-center gap-4 p-5 rounded-lg border border-dashed border-white/80 bg-white/5"
-              )}
-            >
+          {/* Centered logo + name */}
+          <div className="flex items-center gap-4">
+            <div className="hidden sm:block h-px w-16 md:w-32 bg-white/30" />
+            <div className="flex flex-col items-center gap-1 p-0.5">
               <Image
                 src="/logo.png"
                 alt="logo"
-                className="w-20 h-20 object-contain"
+                className="w-[72px] h-[72px] object-contain"
                 priority
-                height={80}
-                width={80}
+                height={72}
+                width={72}
               />
-              <div className="flex flex-col justify-center">
-                <p className="max-w-xs text-lg md:text-2xl font-normal text-white">
-                  The Largest and the Oldest Technical Society of NSUT
-                </p>
-                <div className="flex flex-row items-center gap-4 mt-3 md:mt-4">
-                  <a
-                    href={whatsAppLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="WhatsApp"
-                    className="hover:text-[#00a8cc] transition"
-                  >
-                    <FaWhatsapp size={24} />
-                  </a>
+              <p className="max-w-xs text-sm md:text-base font-normal text-white">
+                The Largest and the Oldest Technical Society of NSUT
+              </p>
+            </div>
+            <div className="hidden sm:block h-px w-16 md:w-32 bg-white/30" />
+          </div>
 
+          {/* Three-across row: Contact | Socials | Useful Links */}
+          <div className="grid grid-cols-1 md:grid-cols-3 items-center md:items-start gap-4 w-full max-w-3xl mx-auto">
+            <div className="flex flex-col items-center md:items-start gap-1 md:justify-self-start">
+              <h3 className="mb-1 text-sm md:text-base font-bold text-white">
+                Contact us
+              </h3>
+              <ul className="flex flex-col items-center md:items-start gap-1">
+                <li className="text-[#efefef] text-sm font-normal text-center md:text-left">
                   <a
-                    href="https://www.instagram.com/ieee_nsut"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram"
+                    href="mailto:ieeensut@gmail.com"
                     className="hover:text-[#00a8cc] transition"
                   >
-                    <FaInstagram size={24} />
+                    ieeensut@gmail.com
                   </a>
-                  <a
-                    href="https://in.linkedin.com/company/ieee-nsut"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn"
-                    className="hover:text-[#00a8cc] transition"
-                  >
-                    <FaLinkedin size={24} />
-                  </a>
-                  <a
-                    href="https://www.facebook.com/ieeensut/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Facebook"
-                    className="hover:text-[#00a8cc] transition"
-                  >
-                    <FaFacebook size={24} />
-                  </a>
-                </div>
+                </li>
+                <li className="text-[#efefef] text-sm font-normal text-center md:text-left">
+                  NSUT, Sector-3 Dwarka, Delhi
+                </li>
+              </ul>
+            </div>
+
+            <div className="flex flex-col items-center gap-1 md:justify-self-center">
+              <h3 className="text-sm md:text-base font-bold text-white">
+                Connect
+              </h3>
+              <div className="flex flex-row items-center gap-3">
+                <a
+                  href={whatsAppLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="WhatsApp"
+                  className="hover:text-[#00a8cc] transition"
+                >
+                  <FaWhatsapp size={18} />
+                </a>
+                <a
+                  href="https://www.instagram.com/ieee_nsut"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="hover:text-[#00a8cc] transition"
+                >
+                  <FaInstagram size={18} />
+                </a>
+                <a
+                  href="https://in.linkedin.com/company/ieee-nsut"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="hover:text-[#00a8cc] transition"
+                >
+                  <FaLinkedin size={18} />
+                </a>
+                <a
+                  href="https://www.facebook.com/ieeensut/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className="hover:text-[#00a8cc] transition"
+                >
+                  <FaFacebook size={18} />
+                </a>
               </div>
             </div>
-            {/* Footer links */}
-            <div
-              className={cn(
-                "grid gap-10 md:gap-8 w-full md:w-auto",
-                "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-              )}
-            >
-              {linksArr.map((section, idx) => (
-                <div
-                  key={idx}
-                  className="flex flex-col items-start min-w-[10rem]"
-                >
-                  {section.title && (
-                    <h3 className="mb-2 text-base md:text-lg font-bold text-white">
-                      {section.title}
-                    </h3>
-                  )}
-                  <ul className="flex flex-col gap-2">
-                    {section.links.map((link, i) => (
-                      <li
-                        key={i}
-                        className={cn(
-                          "text-[#efefef] text-base font-normal transition-all duration-300 hover:pl-2"
-                        )}
+
+            <div className="flex flex-col items-center md:items-start gap-1 md:justify-self-end">
+              <h3 className="mb-1 text-sm md:text-base font-bold text-white">
+                IEEE Useful Links
+              </h3>
+              <ul className="flex flex-col items-center md:items-start gap-1">
+                {usefulLinksData.map((item, i) => {
+                  const Icon = item.icon;
+                  return (
+                    <li key={i} className="text-[#efefef] text-sm font-normal">
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1 hover:text-[#00a8cc] transition"
                       >
-                        {link}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+                        <Icon size={14} /> {item.label}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
           </div>
-          {/* <hr className="border-white/20" /> */}
-          <div className="flex items-center justify-between mt-2">
-            <div className="flex items-center gap-2 text-[#efefef] text-base font-medium">
-              &copy; 2025 IEEE NSUT. All rights reserved.
-            </div>
+
+          {/* Vertical divider into newsletter */}
+          <div className="h-[33px] w-px bg-white/30 -my-1" />
+
+          {/* Centered newsletter */}
+          <div className="flex flex-col items-center gap-1 w-full max-w-sm -mt-1">
+            <h3 className="text-sm md:text-base font-bold text-white">
+              Newsletter
+            </h3>
+            <p className="text-[#efefef] text-xs text-center">
+              Subscribe to our newsletter for more updates.
+            </p>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                console.log("Subscribe:", email);
+              }}
+              className="flex flex-col w-full gap-0 border border-white/30 rounded-md overflow-hidden"
+            >
+              <input
+                type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="your.email@nsut.ac.in"
+                className="bg-transparent px-3 py-1 text-white placeholder-white/50 text-xs outline-none border-b border-white/20"
+              />
+              <button
+                type="submit"
+                className="px-3 py-1 text-xs font-medium text-white hover:text-[#00a8cc] transition"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+
+          {/* Centered copyright */}
+          <div className="text-[#efefef] text-sm font-medium">
+            &copy; 2026 IEEE NSUT. All rights reserved.
           </div>
         </motion.div>
       </div>
