@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, type Variants } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 import { Button } from "../ui/button";
@@ -9,7 +9,7 @@ const MotionButton = motion.create(Button);
 const MotionImage = motion.create(Image);
 
 
-const wordVariant = {
+const wordVariant: Variants = {
   hidden: {
     opacity: 0,
     y: 30,
