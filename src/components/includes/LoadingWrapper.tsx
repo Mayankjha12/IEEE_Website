@@ -16,8 +16,16 @@ export default function LoadingWrapper({
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    // Only play the intro loader once per browser session. On any subsequent
+    // client-side navigation back to this page it is skipped instantly.
+    if (sessionStorage.getItem("ieee-intro-shown")) {
+      setIsLoading(false);
+      return;
+    }
+
     const timeout = setTimeout(() => {
       setIsLoading(false);
+      sessionStorage.setItem("ieee-intro-shown", "true");
       window.scrollTo(0, 0);
     }, duration);
 

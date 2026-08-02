@@ -117,9 +117,9 @@ export default function Header() {
                         layoutId="nav-pill"
                         className={cn(
                           "absolute inset-0 rounded-full",
-                          isActive 
-                            ? "bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 shadow-[0_0_12px_rgba(34,211,238,0.2)]" 
-                            : "bg-white/10"
+                          isActive
+                            ? "bg-gradient-to-r from-cyan-500/25 to-blue-500/25 border border-cyan-400/40 shadow-[0_0_12px_rgba(34,211,238,0.25)]"
+                            : "bg-gradient-to-r from-cyan-500/15 to-blue-500/15 border border-cyan-400/20 shadow-[0_0_8px_rgba(34,211,238,0.15)]"
                         )}
                         transition={{ type: "spring", stiffness: 380, damping: 30 }}
                       />
