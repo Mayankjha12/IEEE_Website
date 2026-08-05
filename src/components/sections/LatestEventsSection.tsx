@@ -34,14 +34,86 @@ const mkTiles = (ev: any, s: number) => ({
 });
 
 const POOLS: Record<string, string[]> = {
-    algoverse: ['1461749280684-dccba630e2f6', '1504384308090-c894fdcc538d', '1555949963-aa79dcee981c', '1543269865-cbf427effbad', '1492684223066-81342ee5ff30', '1528901166007-3784c7dd3653'],
-    webwiz: ['1515187029135-18ee286d815b', '1519389950473-47ba0277781c', '1522202176988-66273c2fd55f', '1487058792275-0ad4aaf24ca7', '1517048676732-d65bc937f952', '1504384308090-c894fdcc538d'],
-    neural25: ['1526378722484-bd91ca387e72', '1555949963-aa79dcee981c', '1523240795612-9a054b0db644', '1475721027785-f74eccf877e2', '1571260899304-425eee4c7efc', '1519389950473-47ba0277781c'],
-    tensymp: ['1540575467063-178a50c2df87', '1511578314322-379afb476865', '1587825140708-dfaf72ae4b04', '1475721027785-f74eccf877e2', '1521737604893-d14cc237f11d', '1478737270239-2f02b77fc618'],
-    pedal: ['1511671782779-c97d3d27a1d4', '1470229722913-7c0e2dbbafd3', '1493225457124-a3eb161ffa5f', '1528901166007-3784c7dd3653', '1478737270239-2f02b77fc618', '1492684223066-81342ee5ff30'],
-    ctc: ['1475721027785-f74eccf877e2', '1528901166007-3784c7dd3653', '1478737270239-2f02b77fc618', '1517048676732-d65bc937f952', '1521737604893-d14cc237f11d', '1492684223066-81342ee5ff30'],
-    cyber: ['1550751827-4bd374c3f58b', '1563986768609-322da13575f3', '1526374965328-7f61d4dc18c5', '1573164713988-8665fc963095', '1555949963-aa79dcee981c', '1531545514256-b1400bc00f31'],
-    dssywlc: ['1511578314322-379afb476865', '1587825140708-dfaf72ae4b04', '1521737604893-d14cc237f11d', '1523240795612-9a054b0db644', '1571260899304-425eee4c7efc', '1540575467063-178a50c2df87']
+  tensymp: [
+    '1540575467063-178a50c2df87',
+    '1511578314322-379afb476865',
+    '1587825140708-dfaf72ae4b04',
+    '1475721027785-f74eccf877e2',
+    '1521737604893-d14cc237f11d',
+    '1478737270239-2f02b77fc618'
+  ],
+
+  techweek: [
+    '1515187029135-18ee286d815b',
+    '1519389950473-47ba0277781c',
+    '1522202176988-66273c2fd55f',
+    '1487058792275-0ad4aaf24ca7',
+    '1517048676732-d65bc937f952',
+    '1504384308090-c894fdcc538d'
+  ],
+
+  dssywlc: [
+    '1511578314322-379afb476865',
+    '1587825140708-dfaf72ae4b04',
+    '1521737604893-d14cc237f11d',
+    '1523240795612-9a054b0db644',
+    '1571260899304-425eee4c7efc',
+    '1540575467063-178a50c2df87'
+  ],
+
+  hack4delhi: [
+    '1550751827-4bd374c3f58b',
+    '1563986768609-322da13575f3',
+    '1526374965328-7f61d4dc18c5',
+    '1573164713988-8665fc963095',
+    '1555949963-aa79dcee981c',
+    '1531545514256-b1400bc00f31'
+  ],
+
+  hackvision: [
+    '1475721027785-f74eccf877e2',
+    '1528901166007-3784c7dd3653',
+    '1478737270239-2f02b77fc618',
+    '1517048676732-d65bc937f952',
+    '1521737604893-d14cc237f11d',
+    '1492684223066-81342ee5ff30'
+  ],
+
+  algoverse: [
+    '1461749280684-dccba630e2f6',
+    '1504384308090-c894fdcc538d',
+    '1555949963-aa79dcee981c',
+    '1543269865-cbf427effbad',
+    '1492684223066-81342ee5ff30',
+    '1528901166007-3784c7dd3653'
+  ],
+
+  waveworks: [
+    '1511671782779-c97d3d27a1d4',
+    '1470229722913-7c0e2dbbafd3',
+    '1493225457124-a3eb161ffa5f',
+    '1528901166007-3784c7dd3653',
+    '1478737270239-2f02b77fc618',
+    '1492684223066-81342ee5ff30'
+  ],
+
+  neuralnexus: [
+    '1526378722484-bd91ca387e72',
+    '1555949963-aa79dcee981c',
+    '1523240795612-9a054b0db644',
+    '1475721027785-f74eccf877e2',
+    '1571260899304-425eee4c7efc',
+    '1519389950473-47ba0277781c'
+  ],
+
+  webwizards: [
+    '1515187029135-18ee286d815b',
+    '1519389950473-47ba0277781c',
+    '1522202176988-66273c2fd55f',
+    '1487058792275-0ad4aaf24ca7',
+    '1517048676732-d65bc937f952',
+    '1504384308090-c894fdcc538d'
+  ]
 };
 
 const upcomingData = [
@@ -51,15 +123,258 @@ const upcomingData = [
 ];
 
 const pastDataRaw = [
-    { id: 'algoverse', name: 'Algoverse 3.0', date: 'Dec 2024', category: 'Competitive Coding', blurb: 'A month-long DSA league with daily problems and live editorials.', tagline: 'Tackling DSA, one day at a time', venue: 'APJ - 11 NSUT, DELHI', organisers: ['Computer Society', 'IEEE NSUT SB'], sponsors: ['InterviewBit', 'GeeksforGeeks', 'Coding Ninjas'], guests: ['Prof. R. Verma — Coordinator, CS'], highlights: ['Daily POTD with streak rewards', 'Nightly live editorial sessions', 'Public top-100 leaderboard', 'Monthly winner shoutouts'], stats: [{ v: '1.2K+', l: 'Participants' }, { v: '30', l: 'Days' }, { v: '450+', l: 'Daily solves' }, { v: '12', l: 'Colleges' }], participants: '1,200+ coders' },
-    { id: 'webwiz', name: 'Web Wizards 2.0', date: 'Oct 2024', category: 'Dev Workshop', blurb: 'A hands-on full-stack build sprint from zero to deployed.', tagline: 'Learn web dev, build real projects', venue: 'APJ - 11 NSUT, DELHI', organisers: ['Computer Society'], sponsors: ['Vercel', 'MongoDB'], guests: ['Ankit Rai — SDE, Google'], highlights: ['Live pair-programming clinics', 'Deploy-to-production walkthrough', 'Demo day with peer voting'], stats: [{ v: '320', l: 'Builders' }, { v: '48', l: 'Projects' }, { v: '2', l: 'Days' }, { v: '9.4', l: 'Avg rating' }], participants: '320 builders' },
-    { id: 'neural25', name: 'Neural Nexus ’25', date: 'Feb 2025', category: 'ML Bootcamp', blurb: 'Connecting minds to machines, one algorithm at a time.', tagline: 'ML Mastery Bootcamp', venue: 'APJ - 11 NSUT, DELHI', organisers: ['Computer Society'], sponsors: ['Weights & Biases', 'Kaggle'], guests: ['Dr. S. Nair — AI Researcher'], highlights: ['From tensors to transformers', 'Capstone model showcase', 'Recruiter shortlist for top teams'], stats: [{ v: '260', l: 'Learners' }, { v: '18', l: 'Days' }, { v: '32', l: 'Models shipped' }, { v: '6', l: 'Mentors' }], participants: '260 learners' },
-    { id: 'tensymp', name: 'IEEE TENSYMP', date: 'Sep 2024', category: 'Conference', blurb: 'Innovating today, transforming tomorrow — R10 flagship.', tagline: 'Region 10 Technical Symposium', venue: 'APJ - 11 NSUT, DELHI', organisers: ['IEEE Delhi Section', 'IEEE NSUT SB'], sponsors: ['IEEE Region 10', 'Springer'], guests: ['Section Chair, IEEE Delhi', 'R10 Director'], highlights: ['Peer-reviewed paper tracks', 'Industry keynote panels', 'Student volunteer corps of 60+'], stats: [{ v: '900+', l: 'Delegates' }, { v: '140', l: 'Papers' }, { v: '18', l: 'Countries' }, { v: '3', l: 'Days' }], participants: '900+ delegates' },
-    { id: 'pedal', name: 'Pedal Playground', date: 'Dec 2024', category: 'Music × Tech', blurb: 'A sound-design workshop where circuits meet synths.', tagline: 'Res Pelagus × Crescendo', venue: 'APJ - 11 NSUT, DELHI', organisers: ['IEEE NSUT SB', 'Crescendo'], sponsors: ['Res Pelagus'], guests: ['Guest sound engineer, Crescendo'], highlights: ['Live pedal-board teardown', 'DIY synth build-along', 'Open-mic showcase'], stats: [{ v: '180', l: 'Attendees' }, { v: '1', l: 'Day' }, { v: '9', l: 'Live demos' }, { v: '4.8', l: 'Avg rating' }], participants: '180 attendees' },
-    { id: 'ctc', name: 'Code to Conquer', date: 'Feb 2025', category: 'Speaker Session', blurb: 'Redefining digital influence with a creator-engineer.', tagline: 'One line of code at a time', venue: 'APJ - 11 NSUT, DELHI', organisers: ['IEEE Computer Society', 'WIE NSUT'], sponsors: ['GitHub Education'], guests: ['Saumya Singh — SWE & Creator'], highlights: ['Fireside on content + code', 'Portfolio review clinic', 'Networking hour'], stats: [{ v: '300', l: 'Seats filled' }, { v: '1', l: 'Speaker' }, { v: '45', l: 'Questions' }, { v: '4.9', l: 'Avg rating' }], participants: '300 attendees' },
-    { id: 'cyber', name: 'WIE Cybersprint', date: 'Mar 2025', category: 'Ideathon', blurb: 'A women-centric cybersecurity ideathon across branches.', tagline: 'IEEE JHSB × IEEE NSUT', venue: 'APJ - 11 NSUT, DELHI', organisers: ['WIE NSUT', 'IEEE JHSB'], sponsors: ['HackerOne', 'TryHackMe'], guests: ['Lead SecEngineer, panelist'], highlights: ['48-hour ideathon sprint', 'Live threat-model reviews', 'Cross-branch collaboration'], stats: [{ v: '210', l: 'Participants' }, { v: '52', l: 'Teams' }, { v: '2', l: 'Days' }, { v: '9', l: 'Branches' }], participants: '210 participants' },
-    { id: 'dssywlc', name: 'DSSYWLC-24', date: 'Nov 2024', category: 'Leadership Congress', blurb: 'The Delhi Section Student & Young-Professional Congress.', tagline: 'IEEE Delhi Section SAC', venue: 'APJ - 11 NSUT, DELHI', organisers: ['IEEE Delhi Section', 'IEEE NSUT SB'], sponsors: ['IEEE Delhi Section'], guests: ['Section Chair', 'YP Committee Lead'], highlights: ['Leadership masterclasses', 'Branch best-practice awards', 'Region-wide networking'], stats: [{ v: '500+', l: 'Leaders' }, { v: '40', l: 'Branches' }, { v: '2', l: 'Days' }, { v: '15', l: 'Sessions' }], participants: '500+ student leaders' }
-];
+  {
+    id: "tensymp",
+    name: "IEEE TENSYMP'24",
+    date: "Sept 2024",
+    category: "International Conference",
+    blurb:
+      "A premier IEEE Region 10 conference bringing together researchers, academicians, industry professionals, and students from over 40 countries.",
+    tagline: "Innovating Today, Transforming Tomorrow",
+    venue: "ITC WelcomHotel Dwarka & NSUT, New Delhi",
+    organisers: ["IEEE Region 10", "IEEE Delhi Section", "IEEE NSUT"],
+    sponsors: ["IEEE Region 10"],
+    guests: ["International Researchers", "Industry Experts"],
+    highlights: [
+      "900+ research paper submissions",
+      "Delegates from 40+ countries",
+      "AI for Social Good sessions",
+      "Women in Engineering forum",
+      "Mock interviews & networking"
+    ],
+    stats: [
+      { v: "900+", l: "Papers" },
+      { v: "40+", l: "Countries" },
+      { v: "3", l: "Days" },
+      { v: "1000+", l: "Delegates" }
+    ],
+    participants: "1000+ delegates"
+  },
+
+  {
+    id: "techweek",
+    name: "Tech Week",
+    date: "2025",
+    category: "Technical Festival",
+    blurb:
+      "IEEE NSUT's flagship week-long technical initiative featuring workshops, competitions, technical events and HackNSUT.",
+    tagline: "Learn. Build. Innovate.",
+    venue: "NSUT Main Campus",
+    organisers: ["IEEE NSUT"],
+    sponsors: [],
+    guests: ["Industry Mentors"],
+    highlights: [
+      "Week-long workshops",
+      "HackNSUT Hackathon",
+      "1000+ participants",
+      "300+ universities",
+      "Industry mentoring"
+    ],
+    stats: [
+      { v: "1000+", l: "Participants" },
+      { v: "300+", l: "Universities" },
+      { v: "7", l: "Days" },
+      { v: "20+", l: "Events" }
+    ],
+    participants: "1000+ students"
+  },
+
+  {
+    id: "dssywlc",
+    name: "DSSYWLC'25",
+    date: "June 2026",
+    category: "IEEE Congress",
+    blurb:
+      "IEEE Delhi Section Students, Young Professionals, Women in Engineering & Life Members Congress hosted at NSUT.",
+    tagline: "Gateway to Opportunities",
+    venue: "NSUT, New Delhi",
+    organisers: ["IEEE Delhi Section", "IEEE NSUT"],
+    sponsors: ["IEEE Delhi Section"],
+    guests: ["Academic Leaders", "Industry Experts"],
+    highlights: [
+      "Keynote sessions",
+      "Networking opportunities",
+      "Competitions",
+      "Professional interactions",
+      "Regional IEEE Congress"
+    ],
+    stats: [
+      { v: "8", l: "States/UTs" },
+      { v: "2", l: "Days" },
+      { v: "500+", l: "Delegates" },
+      { v: "20+", l: "Sessions" }
+    ],
+    participants: "500+ delegates"
+  },
+
+  {
+    id: "hack4delhi",
+    name: "Hack4Delhi",
+    date: "2025",
+    category: "National Hackathon",
+    blurb:
+      "A nationwide civic-tech hackathon empowering students to solve governance and public policy challenges.",
+    tagline: "Technology for Public Good",
+    venue: "Civic Centre, New Delhi",
+    organisers: ["IEEE NSUT", "HN India"],
+    sponsors: [],
+    guests: ["Delhi Government Officials"],
+    highlights: [
+      "4.8K registrations",
+      "78 finalist teams",
+      "₹2.7L prize pool",
+      "Live government pitching",
+      "AI & Civic Tech challenges"
+    ],
+    stats: [
+      { v: "4.8K", l: "Registrations" },
+      { v: "78", l: "Finalists" },
+      { v: "₹2.7L", l: "Prize Pool" },
+      { v: "4", l: "Tracks" }
+    ],
+    participants: "4800+ participants"
+  },
+
+  {
+    id: "hackvision",
+    name: "HackVision 2025",
+    date: "2025",
+    category: "Offline Hackathon",
+    blurb:
+      "A national offline hackathon challenging students to build deployment-ready solutions for real-world problems.",
+    tagline: "Build. Innovate. Deploy.",
+    venue: "NSUT Campus",
+    organisers: ["IEEE NSUT"],
+    sponsors: [],
+    guests: ["Industry Mentors"],
+    highlights: [
+      "1072 registrations",
+      "70 shortlisted teams",
+      "8-hour coding marathon",
+      "AI workshop",
+      "Expert mentoring"
+    ],
+    stats: [
+      { v: "1072", l: "Registrations" },
+      { v: "70", l: "Teams" },
+      { v: "8", l: "Hours" },
+      { v: "20+", l: "Mentors" }
+    ],
+    participants: "1000+ participants"
+  },
+
+  {
+  id: "algoverse",
+  name: "Algoverse 4.0",
+  date: "2025",
+  category: "DSA Bootcamp",
+  blurb:
+    "IEEE NSUT's flagship coding bootcamp that strengthens DSA through daily Problem of the Day challenges and consistent practice.",
+  tagline: "Tackling DSA, One Day at a Time",
+  venue: "Online",
+  organisers: ["IEEE NSUT"],
+  sponsors: [],
+  guests: ["Competitive Programmers", "Mentors"],
+  highlights: [
+    "Daily Problem of the Day",
+    "Algorithm optimization sessions",
+    "Complexity analysis",
+    "Peer learning community",
+    "Weekly coding challenges"
+  ],
+  stats: [
+    { v: "30+", l: "Days" },
+    { v: "100+", l: "Problems" },
+    { v: "500+", l: "Participants" },
+    { v: "Daily", l: "Practice" }
+  ],
+  participants: "500+ coders"
+},
+
+{
+  id: "waveworks",
+  name: "WaveWorks",
+  date: "2025",
+  category: "Electronics Bootcamp",
+  blurb:
+    "A hands-on electronics bootcamp covering analog electronics, digital logic, LTspice simulations and Verilog-based hardware design.",
+  tagline: "From Circuits to Silicon",
+  venue: "Online",
+  organisers: ["IEEE NSUT"],
+  sponsors: [],
+  guests: ["Electronics Mentors"],
+  highlights: [
+    "Circuit fundamentals",
+    "LTspice simulation",
+    "Analog electronics",
+    "Digital logic design",
+    "Verilog HDL programming"
+  ],
+  stats: [
+    { v: "5+", l: "Modules" },
+    { v: "40+", l: "Sessions" },
+    { v: "200+", l: "Learners" },
+    { v: "Hands-on", l: "Projects" }
+  ],
+  participants: "200+ learners"
+},
+
+{
+  id: "neuralnexus",
+  name: "Neural Nexus 2.0",
+  date: "2025",
+  category: "Machine Learning Bootcamp",
+  blurb:
+    "A structured Machine Learning bootcamp taking participants from Python fundamentals to Deep Learning through practical projects.",
+  tagline: "Connecting Minds to Machines",
+  venue: "Online",
+  organisers: ["IEEE NSUT"],
+  sponsors: [],
+  guests: ["AI Mentors"],
+  highlights: [
+    "Python fundamentals",
+    "Regression & Classification",
+    "Clustering techniques",
+    "Deep Learning with CNNs",
+    "Weekly quizzes & assignments"
+  ],
+  stats: [
+    { v: "6+", l: "Modules" },
+    { v: "50+", l: "Hours" },
+    { v: "300+", l: "Participants" },
+    { v: "Project", l: "Based" }
+  ],
+  participants: "300+ learners"
+},
+
+{
+  id: "webwizards",
+  name: "Web Wizards 3.0",
+  date: "2025",
+  category: "Full Stack Bootcamp",
+  blurb:
+    "A comprehensive 20-week full-stack bootcamp taking beginners from HTML fundamentals to deploying production-ready web applications.",
+  tagline: "Build the Web, One Project at a Time",
+  venue: "Online",
+  organisers: ["IEEE NSUT"],
+  sponsors: [],
+  guests: ["Web Developers"],
+  highlights: [
+    "HTML, CSS & JavaScript",
+    "React development",
+    "Node.js & Express",
+    "MongoDB integration",
+    "Deployment & CI/CD"
+  ],
+  stats: [
+    { v: "20", l: "Weeks" },
+    { v: "10+", l: "Projects" },
+    { v: "500+", l: "Students" },
+    { v: "1", l: "Capstone" }
+  ],
+  participants: "500+ developers"
+}
+]; 
 
 const pastData = pastDataRaw.map((ev, i) => {
     const pool = (POOLS[ev.id] || []).map((id) => U(id));
