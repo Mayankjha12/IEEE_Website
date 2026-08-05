@@ -34,86 +34,77 @@ const mkTiles = (ev: any, s: number) => ({
 });
 
 const POOLS: Record<string, string[]> = {
-  tensymp: [
-    '1540575467063-178a50c2df87',
-    '1511578314322-379afb476865',
-    '1587825140708-dfaf72ae4b04',
-    '1475721027785-f74eccf877e2',
-    '1521737604893-d14cc237f11d',
-    '1478737270239-2f02b77fc618'
-  ],
+  smartsensing: [
+  '1526374965328-7f61d4dc18c5',
+  '1555949963-aa79dcee981c',
+  '1528901166007-3784c7dd3653',
+  '1492684223066-81342ee5ff30',
+  '1543269865-cbf427effbad',
+  '1504384308090-c894fdcc538d'
+],
 
-  techweek: [
-    '1515187029135-18ee286d815b',
-    '1519389950473-47ba0277781c',
-    '1522202176988-66273c2fd55f',
-    '1487058792275-0ad4aaf24ca7',
-    '1517048676732-d65bc937f952',
-    '1504384308090-c894fdcc538d'
-  ],
+leadershipconclave: [
+  '1511578314322-379afb476865',
+  '1587825140708-dfaf72ae4b04',
+  '1540575467063-178a50c2df87',
+  '1521737604893-d14cc237f11d',
+  '1475721027785-f74eccf877e2',
+  '1478737270239-2f02b77fc618'
+],
 
-  dssywlc: [
-    '1511578314322-379afb476865',
-    '1587825140708-dfaf72ae4b04',
-    '1521737604893-d14cc237f11d',
-    '1523240795612-9a054b0db644',
-    '1571260899304-425eee4c7efc',
-    '1540575467063-178a50c2df87'
-  ],
+hilsttp: [
+  '1528901166007-3784c7dd3653',
+  '1492684223066-81342ee5ff30',
+  '1543269865-cbf427effbad',
+  '1504384308090-c894fdcc538d',
+  '1461749280684-dccba630e2f6',
+  '1515187029135-18ee286d815b'
+],
 
-  hack4delhi: [
-    '1550751827-4bd374c3f58b',
-    '1563986768609-322da13575f3',
-    '1526374965328-7f61d4dc18c5',
-    '1573164713988-8665fc963095',
-    '1555949963-aa79dcee981c',
-    '1531545514256-b1400bc00f31'
-  ],
+dsaverse: [
+  '1461749280684-dccba630e2f6',
+  '1504384308090-c894fdcc538d',
+  '1492684223066-81342ee5ff30',
+  '1543269865-cbf427effbad',
+  '1528901166007-3784c7dd3653',
+  '1517048676732-d65bc937f952'
+],
 
-  hackvision: [
-    '1475721027785-f74eccf877e2',
-    '1528901166007-3784c7dd3653',
-    '1478737270239-2f02b77fc618',
-    '1517048676732-d65bc937f952',
-    '1521737604893-d14cc237f11d',
-    '1492684223066-81342ee5ff30'
-  ],
+dataverse: [
+  '1526378722484-bd91ca387e72',
+  '1555949963-aa79dcee981c',
+  '1523240795612-9a054b0db644',
+  '1571260899304-425eee4c7efc',
+  '1519389950473-47ba0277781c',
+  '1475721027785-f74eccf877e2'
+],
 
-  algoverse: [
-    '1461749280684-dccba630e2f6',
-    '1504384308090-c894fdcc538d',
-    '1555949963-aa79dcee981c',
-    '1543269865-cbf427effbad',
-    '1492684223066-81342ee5ff30',
-    '1528901166007-3784c7dd3653'
-  ],
+ieeeday: [
+  '1511578314322-379afb476865',
+  '1587825140708-dfaf72ae4b04',
+  '1521737604893-d14cc237f11d',
+  '1540575467063-178a50c2df87',
+  '1478737270239-2f02b77fc618',
+  '1475721027785-f74eccf877e2'
+],
 
-  waveworks: [
-    '1511671782779-c97d3d27a1d4',
-    '1470229722913-7c0e2dbbafd3',
-    '1493225457124-a3eb161ffa5f',
-    '1528901166007-3784c7dd3653',
-    '1478737270239-2f02b77fc618',
-    '1492684223066-81342ee5ff30'
-  ],
+cipherquest: [
+  '1550751827-4bd374c3f58b',
+  '1563986768609-322da13575f3',
+  '1573164713988-8665fc963095',
+  '1526374965328-7f61d4dc18c5',
+  '1531545514256-b1400bc00f31',
+  '1555949963-aa79dcee981c'
+],
 
-  neuralnexus: [
-    '1526378722484-bd91ca387e72',
-    '1555949963-aa79dcee981c',
-    '1523240795612-9a054b0db644',
-    '1475721027785-f74eccf877e2',
-    '1571260899304-425eee4c7efc',
-    '1519389950473-47ba0277781c'
-  ],
-
-  webwizards: [
-    '1515187029135-18ee286d815b',
-    '1519389950473-47ba0277781c',
-    '1522202176988-66273c2fd55f',
-    '1487058792275-0ad4aaf24ca7',
-    '1517048676732-d65bc937f952',
-    '1504384308090-c894fdcc538d'
-  ]
+aiethics: [
+  '1526378722484-bd91ca387e72',
+  '1511578314322-379afb476865',
+  '1587825140708-dfaf72ae4b04',
+  '1540575467063-178a50c2df87',
+  '1523240795612-9a054b0db644',
+  '1571260899304-425eee4c7efc'
+],
 };
 
 const upcomingData = [
@@ -123,256 +114,228 @@ const upcomingData = [
 ];
 
 const pastDataRaw = [
-  {
-    id: "tensymp",
-    name: "IEEE TENSYMP'24",
-    date: "Sept 2024",
-    category: "International Conference",
-    blurb:
-      "A premier IEEE Region 10 conference bringing together researchers, academicians, industry professionals, and students from over 40 countries.",
-    tagline: "Innovating Today, Transforming Tomorrow",
-    venue: "ITC WelcomHotel Dwarka & NSUT, New Delhi",
-    organisers: ["IEEE Region 10", "IEEE Delhi Section", "IEEE NSUT"],
-    sponsors: ["IEEE Region 10"],
-    guests: ["International Researchers", "Industry Experts"],
-    highlights: [
-      "900+ research paper submissions",
-      "Delegates from 40+ countries",
-      "AI for Social Good sessions",
-      "Women in Engineering forum",
-      "Mock interviews & networking"
-    ],
-    stats: [
-      { v: "900+", l: "Papers" },
-      { v: "40+", l: "Countries" },
-      { v: "3", l: "Days" },
-      { v: "1000+", l: "Delegates" }
-    ],
-    participants: "1000+ delegates"
-  },
-
-  {
-    id: "techweek",
-    name: "Tech Week",
-    date: "2025",
-    category: "Technical Festival",
-    blurb:
-      "IEEE NSUT's flagship week-long technical initiative featuring workshops, competitions, technical events and HackNSUT.",
-    tagline: "Learn. Build. Innovate.",
-    venue: "NSUT Main Campus",
-    organisers: ["IEEE NSUT"],
-    sponsors: [],
-    guests: ["Industry Mentors"],
-    highlights: [
-      "Week-long workshops",
-      "HackNSUT Hackathon",
-      "1000+ participants",
-      "300+ universities",
-      "Industry mentoring"
-    ],
-    stats: [
-      { v: "1000+", l: "Participants" },
-      { v: "300+", l: "Universities" },
-      { v: "7", l: "Days" },
-      { v: "20+", l: "Events" }
-    ],
-    participants: "1000+ students"
-  },
-
-  {
-    id: "dssywlc",
-    name: "DSSYWLC'25",
-    date: "June 2026",
-    category: "IEEE Congress",
-    blurb:
-      "IEEE Delhi Section Students, Young Professionals, Women in Engineering & Life Members Congress hosted at NSUT.",
-    tagline: "Gateway to Opportunities",
-    venue: "NSUT, New Delhi",
-    organisers: ["IEEE Delhi Section", "IEEE NSUT"],
-    sponsors: ["IEEE Delhi Section"],
-    guests: ["Academic Leaders", "Industry Experts"],
-    highlights: [
-      "Keynote sessions",
-      "Networking opportunities",
-      "Competitions",
-      "Professional interactions",
-      "Regional IEEE Congress"
-    ],
-    stats: [
-      { v: "8", l: "States/UTs" },
-      { v: "2", l: "Days" },
-      { v: "500+", l: "Delegates" },
-      { v: "20+", l: "Sessions" }
-    ],
-    participants: "500+ delegates"
-  },
-
-  {
-    id: "hack4delhi",
-    name: "Hack4Delhi",
-    date: "2025",
-    category: "National Hackathon",
-    blurb:
-      "A nationwide civic-tech hackathon empowering students to solve governance and public policy challenges.",
-    tagline: "Technology for Public Good",
-    venue: "Civic Centre, New Delhi",
-    organisers: ["IEEE NSUT", "HN India"],
-    sponsors: [],
-    guests: ["Delhi Government Officials"],
-    highlights: [
-      "4.8K registrations",
-      "78 finalist teams",
-      "₹2.7L prize pool",
-      "Live government pitching",
-      "AI & Civic Tech challenges"
-    ],
-    stats: [
-      { v: "4.8K", l: "Registrations" },
-      { v: "78", l: "Finalists" },
-      { v: "₹2.7L", l: "Prize Pool" },
-      { v: "4", l: "Tracks" }
-    ],
-    participants: "4800+ participants"
-  },
-
-  {
-    id: "hackvision",
-    name: "HackVision 2025",
-    date: "2025",
-    category: "Offline Hackathon",
-    blurb:
-      "A national offline hackathon challenging students to build deployment-ready solutions for real-world problems.",
-    tagline: "Build. Innovate. Deploy.",
-    venue: "NSUT Campus",
-    organisers: ["IEEE NSUT"],
-    sponsors: [],
-    guests: ["Industry Mentors"],
-    highlights: [
-      "1072 registrations",
-      "70 shortlisted teams",
-      "8-hour coding marathon",
-      "AI workshop",
-      "Expert mentoring"
-    ],
-    stats: [
-      { v: "1072", l: "Registrations" },
-      { v: "70", l: "Teams" },
-      { v: "8", l: "Hours" },
-      { v: "20+", l: "Mentors" }
-    ],
-    participants: "1000+ participants"
-  },
-
-  {
-  id: "algoverse",
-  name: "Algoverse 4.0",
-  date: "2025",
-  category: "DSA Bootcamp",
+    {
+  id: "smartsensing",
+  name: "Smart Sensing with IoT",
+  date: "14–16 July 2025",
+  category: "IoT Workshop",
   blurb:
-    "IEEE NSUT's flagship coding bootcamp that strengthens DSA through daily Problem of the Day challenges and consistent practice.",
-  tagline: "Tackling DSA, One Day at a Time",
+    "A hands-on workshop introducing students to the fundamentals and practical applications of the Internet of Things (IoT).",
+  tagline: "Connecting Ideas with Smart Technologies",
+  venue: "Incubation and Innovation Foundation (NSUT-IIF), NSUT, Dwarka, Delhi",
+  organisers: ["IEEE NSUT"],
+  sponsors: [],
+  guests: ["IoT Experts", "Faculty Mentors"],
+  highlights: [
+    "Hands-on IoT projects",
+    "Sensors & Microcontrollers",
+    "Prototype development",
+    "Practical problem solving",
+    "Automation concepts"
+  ],
+  stats: [
+    { v: "3", l: "Days" },
+    { v: "100+", l: "Participants" },
+    { v: "10+", l: "Hands-on Sessions" },
+    { v: "IoT", l: "Projects" }
+  ],
+  participants: "100+ students"
+},
+
+{
+  id: "leadershipconclave",
+  name: "IEEE Leadership Conclave",
+  date: "25 July 2025",
+  category: "Leadership Conclave",
+  blurb:
+    "A leadership conclave focused on fostering global collaboration, innovation, and knowledge sharing within the IEEE community.",
+  tagline: "Leading Innovation Together",
+  venue: "APJ 11, NSUT Main Campus, Dwarka",
+  organisers: ["IEEE NSUT"],
+  sponsors: [],
+  guests: ["IEEE Leaders", "Academicians"],
+  highlights: [
+    "Visionary keynote sessions",
+    "Leadership development",
+    "Innovation discussions",
+    "Global collaboration",
+    "IEEE networking"
+  ],
+  stats: [
+    { v: "1", l: "Day" },
+    { v: "15+", l: "Speakers" },
+    { v: "300+", l: "Participants" },
+    { v: "IEEE", l: "Leaders" }
+  ],
+  participants: "300+ attendees"
+},
+
+{
+  id: "hilsttp",
+  name: "Hardware-In-the-Loop (HIL) STTP",
+  date: "28 Jul – 01 Aug 2025",
+  category: "Technical Training",
+  blurb:
+    "A short-term training program focused on Hardware-in-the-Loop simulation, automation, and intelligent control systems.",
+  tagline: "Bridging Theory with Real-Time Engineering",
+  venue: "Incubation and Innovation Foundation (NSUT-IIF), NSUT, Dwarka, Delhi",
+  organisers: ["IEEE NSUT"],
+  sponsors: [],
+  guests: ["Industry Experts"],
+  highlights: [
+    "Real-time simulation",
+    "Automation technologies",
+    "Smart grids",
+    "Electric vehicle applications",
+    "Industrial engineering tools"
+  ],
+  stats: [
+    { v: "5", l: "Days" },
+    { v: "50+", l: "Participants" },
+    { v: "10+", l: "Expert Sessions" },
+    { v: "HIL", l: "Training" }
+  ],
+  participants: "50+ participants"
+},
+
+{
+  id: "dsaverse",
+  name: "DSAVerse",
+  date: "16 October 2025",
+  category: "Coding Competition",
+  blurb:
+    "A coding competition focused on strengthening Data Structures & Algorithms and problem-solving skills.",
+  tagline: "Code. Compete. Conquer.",
   venue: "Online",
   organisers: ["IEEE NSUT"],
   sponsors: [],
-  guests: ["Competitive Programmers", "Mentors"],
+  guests: ["Industry Experts"],
   highlights: [
-    "Daily Problem of the Day",
-    "Algorithm optimization sessions",
-    "Complexity analysis",
-    "Peer learning community",
-    "Weekly coding challenges"
+    "Competitive coding contest",
+    "DSA challenges",
+    "Problem-solving sessions",
+    "Industry insights",
+    "Logical thinking"
   ],
   stats: [
-    { v: "30+", l: "Days" },
-    { v: "100+", l: "Problems" },
+    { v: "1", l: "Day" },
     { v: "500+", l: "Participants" },
-    { v: "Daily", l: "Practice" }
+    { v: "4", l: "Challenge Rounds" },
+    { v: "DSA", l: "Focus" }
   ],
   participants: "500+ coders"
 },
-
-{
-  id: "waveworks",
-  name: "WaveWorks",
-  date: "2025",
-  category: "Electronics Bootcamp",
+    
+  {
+  id: "dataverse",
+  name: "DataVerse",
+  date: "18 October 2025",
+  category: "Data Science Competition",
   blurb:
-    "A hands-on electronics bootcamp covering analog electronics, digital logic, LTspice simulations and Verilog-based hardware design.",
-  tagline: "From Circuits to Silicon",
+    "A data science competition focused on applying machine learning and analytics to solve real-world problems.",
+  tagline: "Transform Data into Intelligence",
   venue: "Online",
   organisers: ["IEEE NSUT"],
   sponsors: [],
-  guests: ["Electronics Mentors"],
+  guests: ["Data Science Mentors"],
   highlights: [
-    "Circuit fundamentals",
-    "LTspice simulation",
-    "Analog electronics",
-    "Digital logic design",
-    "Verilog HDL programming"
+    "Machine Learning challenges",
+    "Predictive modeling",
+    "Real-world datasets",
+    "Analytics workflow",
+    "AI-driven solutions"
   ],
   stats: [
-    { v: "5+", l: "Modules" },
-    { v: "40+", l: "Sessions" },
-    { v: "200+", l: "Learners" },
-    { v: "Hands-on", l: "Projects" }
+    { v: "1", l: "Day" },
+    { v: "400+", l: "Participants" },
+    { v: "5", l: "Challenge Tracks" },
+    { v: "ML", l: "Projects" }
   ],
-  participants: "200+ learners"
+  participants: "400+ participants"
 },
 
 {
-  id: "neuralnexus",
-  name: "Neural Nexus 2.0",
-  date: "2025",
-  category: "Machine Learning Bootcamp",
+  id: "ieeeday",
+  name: "IEEE Day 2025",
+  date: "7 October 2025",
+  category: "IEEE Celebration",
   blurb:
-    "A structured Machine Learning bootcamp taking participants from Python fundamentals to Deep Learning through practical projects.",
-  tagline: "Connecting Minds to Machines",
-  venue: "Online",
+    "A celebration of IEEE Day promoting innovation, collaboration, and technology for a better tomorrow.",
+  tagline: "Leveraging Technology for a Better Tomorrow",
+  venue: "NSUT Campus",
   organisers: ["IEEE NSUT"],
-  sponsors: [],
-  guests: ["AI Mentors"],
+  sponsors: ["IEEE"],
+  guests: ["Faculty", "Industry Speakers"],
   highlights: [
-    "Python fundamentals",
-    "Regression & Classification",
-    "Clustering techniques",
-    "Deep Learning with CNNs",
-    "Weekly quizzes & assignments"
+    "Technical competitions",
+    "Expert speaker sessions",
+    "Interactive activities",
+    "Networking opportunities",
+    "IEEE community celebration"
   ],
   stats: [
-    { v: "6+", l: "Modules" },
-    { v: "50+", l: "Hours" },
-    { v: "300+", l: "Participants" },
-    { v: "Project", l: "Based" }
+    { v: "1", l: "Day" },
+    { v: "500+", l: "Participants" },
+    { v: "10+", l: "Activities" },
+    { v: "IEEE", l: "Community" }
   ],
-  participants: "300+ learners"
+  participants: "500+ attendees"
 },
 
 {
-  id: "webwizards",
-  name: "Web Wizards 3.0",
-  date: "2025",
-  category: "Full Stack Bootcamp",
+  id: "cipherquest",
+  name: "Cipher Quest",
+  date: "4 November 2025",
+  category: "National Technical Competition",
   blurb:
-    "A comprehensive 20-week full-stack bootcamp taking beginners from HTML fundamentals to deploying production-ready web applications.",
-  tagline: "Build the Web, One Project at a Time",
-  venue: "Online",
+    "A national-level competition combining logical reasoning, teamwork, and technical problem-solving through immersive challenges.",
+  tagline: "Think. Solve. Escape.",
+  venue: "NSUT Campus",
   organisers: ["IEEE NSUT"],
   sponsors: [],
-  guests: ["Web Developers"],
+  guests: ["Technical Mentors"],
   highlights: [
-    "HTML, CSS & JavaScript",
-    "React development",
-    "Node.js & Express",
-    "MongoDB integration",
-    "Deployment & CI/CD"
+    "Escape room challenges",
+    "Logic puzzles",
+    "Circuit challenges",
+    "Team-based competition",
+    "Technical problem solving"
   ],
   stats: [
-    { v: "20", l: "Weeks" },
-    { v: "10+", l: "Projects" },
-    { v: "500+", l: "Students" },
-    { v: "1", l: "Capstone" }
+    { v: "30", l: "Teams" },
+    { v: "1", l: "Day" },
+    { v: "5+", l: "Challenge Rounds" },
+    { v: "National", l: "Level" }
   ],
-  participants: "500+ developers"
+  participants: "30 Teams"
+},
+
+{
+  id: "aiethics",
+  name: "AI: Ethics & Security Conclave",
+  date: "26–27 January 2026",
+  category: "AI Conclave",
+  blurb:
+    "A conclave exploring the ethical, legal, governance, and cybersecurity aspects of Artificial Intelligence.",
+  tagline: "Responsible AI for Humanity",
+  venue: "APJ 11, NSUT",
+  organisers: ["IEEE NSUT"],
+  sponsors: [],
+  guests: ["AI Researchers", "Cybersecurity Experts"],
+  highlights: [
+    "Responsible AI discussions",
+    "Cybersecurity sessions",
+    "Keynote talks",
+    "Ethics workshops",
+    "Interdisciplinary dialogue"
+  ],
+  stats: [
+    { v: "2", l: "Days" },
+    { v: "20+", l: "Expert Sessions" },
+    { v: "500+", l: "Participants" },
+    { v: "AI", l: "Focus" }
+  ],
+  participants: "500+ attendees"
 }
 ]; 
 
