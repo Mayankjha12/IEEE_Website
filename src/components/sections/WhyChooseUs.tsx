@@ -64,28 +64,28 @@ const FEATURE_COLORS = [
 
 const features = [
   {
-    icon: Globe ,
+    icon: Globe,
     title: "Global Recognition",
     description:
-      "Join a network of over 400,000 professionals in 160+ countries. At IEEE NSUT, be part of a community renowned for its contributions to cutting-edge technology and innovation.",
+      "Be a part of the world’s largest and most prestigious professional community for engineers, researchers, and innovators. With a presence in over 160 countries, IEEE opens the door to a global network of accomplished professionals, pioneering research, international collaborations, and opportunities that extend far beyond the classroom. At IEEE NSUT, you gain the platform, exposure, and connections to make your mark on a global stage.",
   },
   {
     icon: Rocket,
     title: "Professional Edge",
     description:
-      "Access internships, certifications, conferences, and research opportunities. IEEE NSUT helps bridge classroom learning with real-world impact, building a profile that stands out.",
+      "Accelerate your professional journey through workshops, hackathons, certifications, internships, industry interactions, and networking opportunities. IEEE NSUT equips you with practical skills, valuable experiences, and lasting professional relationships to help you thrive in today’s competitive world.",
   },
   {
     icon: Lightbulb,
     title: "Innovation-Driven Culture",
     description:
-      "Immerse yourself in an environment where ideas thrive. With technical workshops, hands-on projects, and expert sessions, every member is encouraged to explore, experiment, and evolve.",
+      "Explore emerging technologies through hands-on projects, technical workshops, research initiatives, and expert-led sessions. IEEE NSUT cultivates a culture of innovation where curiosity, collaboration, and continuous learning empower you to transform ideas into real-world solutions.",
   },
   {
     icon: Heart,
     title: "Friends and Connections for Life",
     description:
-      "Join a vibrant, supportive community where collaboration and lasting friendships go hand in hand with learning. At IEEE NSUT, you gain more than skills—you build relationships that last far beyond college.",
+      "Join a vibrant community of passionate students, accomplished alumni, and industry professionals who inspire and support one another. Build lasting friendships, expand your professional network, and create meaningful connections that continue to open doors throughout your academic and professional journey.",
   },
 ];
 
