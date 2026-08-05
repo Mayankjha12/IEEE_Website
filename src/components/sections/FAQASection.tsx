@@ -66,25 +66,44 @@ const faqData: Record<string, FAQItem[]> = {
     },
   ],
   research: [
-    {
-      question: "How do I access IEEE research papers and publications?",
-      answer: "IEEE research papers are available through the IEEE Xplore digital library. As an IEEE NSUT student member, you get special access privileges and workshops on how to write, search for, and publish research papers.",
-    },
-    {
-      question: "Can undergraduate students publish papers through IEEE?",
-      answer: "Yes, absolutely! We regularly host research-writing bootcamps and connect undergraduate students with senior mentors and faculty advisors to guide them through the drafting, editing, and submission process for IEEE conferences.",
-    },
-  ],
+  {
+    question: "How can IEEE NSUT help me get started with research?",
+    answer:
+      "IEEE NSUT organizes research-oriented workshops, mentorship sessions, and technical talks to introduce students to research methodologies, literature reviews, and emerging technologies. These initiatives help students take their first steps toward meaningful research.",
+  },
+  {
+    question: "Do I need prior research experience to participate in research activities?",
+    answer:
+      "No. Students from all academic years and experience levels are welcome to participate. With the right guidance, mentorship, and dedication, even beginners can build research skills and contribute to innovative projects.",
+  },
+  {
+    question: "Can undergraduate students publish research papers through IEEE NSUT?",
+    answer:
+      "Absolutely! Undergraduate students are encouraged to explore research from an early stage. Through mentorship, collaborative projects, and technical guidance, IEEE NSUT helps students develop research ideas and prepare them for publication in reputed conferences and journals when their work meets the required standards.",
+  },
+],
   events: [
-    {
-      question: "What conferences, hackathons, and events do you organize?",
-      answer: "We host national-level hackathons, AI/ML workshops, guest lectures by industry veterans from top tech companies, and flagship annual events where students build real-world products, collaborate, and win prizes.",
-    },
-    {
-      question: "How can I participate in hands-on technical projects?",
-      answer: "IEEE NSUT runs dedicated Special Interest Groups (SIGs) in AI/ML, WebDev, AppDev, Core Electronics, and Research. Members can join these groups, receive mentorship, and build robust portfolio projects.",
-    },
-  ],
+  {
+    question: "What can I expect at an IEEE NSUT event?",
+    answer:
+      "Every IEEE NSUT event, whether it is a hackathon, bootcamp, workshop or conclave, is designed to help you learn through doing. You can expect hands-on sessions, expert mentorship, problem-solving collaboration, professional networking, and opportunities to work on projects that make a real-world difference. This philosophy is reflected in events like HackVision, Hack4Delhi, Neural Nexus, Web Wizards, and Algoverse.",
+  },
+  {
+    question: "What kinds of events does IEEE NSUT organize?",
+    answer:
+      "IEEE NSUT hosts a diverse portfolio of events, including national-level hackathons like Hack4Delhi, structured technical bootcamps such as Web Wizards, Neural Nexus, Algoverse, and WaveWorks, interdisciplinary conclaves like the AI: Ethics & Security Conclave, design competitions such as Sparkprint, and innovative technical challenges like Cipher Quest.",
+  },
+  {
+    question: "What makes IEEE NSUT events unique?",
+    answer:
+      "Our events are geared towards experiential learning through hands-on projects, collaborative problem solving, and mentorship from industry experts and senior members. Participants are not just attendees, but builders, creators, competitors, and learners in a culture of innovation and continuous growth.",
+  },
+  {
+    question: "Are the events beginner-friendly?",
+    answer:
+      "Yes. Our events are open to students of all skill levels. Whether you're just starting out on your technical journey or already have experience, you'll find workshops, competitions, and learning opportunities suited to you. Many sessions provide hands-on guidance and mentorship, ensuring everyone feels confident to participate.",
+  },
+],
 };
 export default function FAQASection() {
   const [activeTab, setActiveTab] = React.useState<string>("general");
