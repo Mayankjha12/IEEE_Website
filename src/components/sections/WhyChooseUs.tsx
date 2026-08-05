@@ -226,7 +226,7 @@ const WhyChooseUs = () => {
         </Heading>
 
         <motion.div
-          className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 relative min-h-[440px]"
+          className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 relative"
           initial="hidden"
           animate={isSectionInView ? "visible" : "hidden"}
         >
