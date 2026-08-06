@@ -12,7 +12,7 @@ const seniorHeads = [
   },
   {
     name: "Shubham Khatri",
-    img: "/team/shubham.jpg",
+    img: "/team/shubham.jpeg",
     linkedinUrl: "https://www.linkedin.com/in/shubham-t1920/",
     role: "Head of Technology",
   },
