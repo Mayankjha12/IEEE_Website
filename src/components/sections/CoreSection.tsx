@@ -75,19 +75,14 @@ const departmentHeads = {
       name: "Technical Affairs",
       members: [
         {
-          name: "Bhuwan Chandra Pandey",
-          imageUrl: "/team/bhuwan.jpg",
-          linkedinUrl: "https://www.linkedin.com/in/bhuwan-chandra-pandey/",
+          name: "Mayank Kumar Jha",
+          imageUrl: "/team/mayank.jpeg",
+          linkedinUrl: "https://www.linkedin.com/in/mayank-kumar-jha-6b4658328/",
         },
         {
-          name: "Shubham Tandon",
-          imageUrl: "/team/shubham.jpg",
-          linkedinUrl: "https://www.linkedin.com/in/shubham-t1920/",
-        },
-        {
-          name: "Dheeraj Sharma",
-          imageUrl: "/team/dheeraj.jpg",
-          linkedinUrl: "https://www.linkedin.com/in/greatnerve/",
+          name: "Shubham Khatri",
+          imageUrl: "/team/shubham.jpeg",
+          linkedinUrl: "https://www.linkedin.com/in/shubham3155/",
         },
       ],
     },
