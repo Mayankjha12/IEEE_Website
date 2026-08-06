@@ -6,7 +6,7 @@ import Image from "next/image";
 const seniorHeads = [
   {
     name: "Mayank Kumar Jha",
-    img: "/team/mayank.jpg",
+    img: "/team/mayank.jpeg",
     linkedinUrl: "https://www.linkedin.com/in/bhuwan-chandra-pandey/",
     role : "Head of Technology",
   },
