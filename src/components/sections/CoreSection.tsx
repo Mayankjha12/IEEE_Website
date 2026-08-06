@@ -12,7 +12,7 @@ const executiveCouncil = [
   {
     name: "Hemang Bhat",
     role: "Vice Chairperson",
-    imageUrl: "/team/Hemang_Bhat.jpg",
+    imageUrl: "/team/Hemang_Bhat.jpeg",
     linkedinUrl: "https://www.linkedin.com/in/hemangbhat",
   },
 
