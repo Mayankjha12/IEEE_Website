@@ -22,12 +22,12 @@ const execommsMembers = [
   {
     name: "Riya Khohal",
     role: "Execomm",
-    img: "/team/Riya_Khohal.HEIC",
+    img: "/team/Riya_Khohal (1).jpg",
   },
   {
     name: "Pari Kataria",
     role: "Execomm",
-    img: "/team/Pari_Kataria.jpg",
+    img: "/team/Pari_Kataria (1).jpg",
   },
   {
     name: "Piyush Aggarwal",
@@ -42,7 +42,7 @@ const execommsMembers = [
   {
     name: "Ishaan Vachher",
     role: "Execomm",
-    img: "/team/Ishaan_Vachher.jpg",
+    img: "/team/Ishaan_Vachher (1).jpg",
   },
   {
     name: "Tanmay",
