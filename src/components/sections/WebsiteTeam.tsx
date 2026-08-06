@@ -22,7 +22,7 @@ const execommsMembers = [
   {
     name: "Riya Khohal",
     role: "Execomm",
-    img: "/team/Riya_Khohal.jpg",
+    img: "/team/Riya_Khohal.HEIC",
   },
   {
     name: "Pari Kataria",
