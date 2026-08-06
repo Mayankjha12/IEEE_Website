@@ -19,7 +19,7 @@ const executiveCouncil = [
   {
     name: "Bhaavin Jain",
     role: "Chairperson",
-    imageUrl: "/team/Bhaavin.HEIC",
+    imageUrl: "/team/Bhaavin.jpg",
     linkedinUrl: "https://www.linkedin.com/in/bhaavin-jain/",
   },
   {
@@ -31,7 +31,7 @@ const executiveCouncil = [
   {
     name: "Samanvaya Gupta",
     role: "Vice Chairperson",
-    imageUrl: "/team/Samanvaya.HEIC",
+    imageUrl: "/team/Samanvaya.jpg",
     linkedinUrl:
       "https://www.linkedin.com/in/samanvaya-gupta-00a3b3352?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
   },
