@@ -4,36 +4,36 @@ import Image from "next/image";
 
 const executiveCouncil = [
   {
-    name: "Akshat Kacodia",
+    name: "Tushti Arora",
     role: "Vice Chairperson",
-    imageUrl: "/team/akshat.jpg",
-    linkedinUrl: "https://www.linkedin.com/in/akshat-kacodia-554450293/",
+    imageUrl: "/team/anushka.jpg",
+    linkedinUrl: "https://www.linkedin.com/in/tushtiarora",
   },
   {
-    name: "Sakshi Sahu",
+    name: "Hemang Bhat",
     role: "Vice Chairperson",
-    imageUrl: "/team/sakshi.jpg",
-    linkedinUrl: "https://www.linkedin.com/in/sakshi-sahu-ss",
+    imageUrl: "/team/Hemang_Bhat.jpg",
+    linkedinUrl: "https://www.linkedin.com/in/hemangbhat",
   },
 
   {
-    name: "Aditya Mishra",
+    name: "Bhaavin Jain",
     role: "Chairperson",
-    imageUrl: "/team/aditya_mishra.jpg",
-    linkedinUrl: "https://www.linkedin.com/in/aditya-mishra-bb44ab2b9",
+    imageUrl: "/team/Bhaavin.HEIC",
+    linkedinUrl: "https://www.linkedin.com/in/bhaavin-jain/",
   },
   {
-    name: "Diya Joshi",
+    name: "Gunn Aggarwal",
     role: "Vice Chairperson",
-    imageUrl: "/team/diya.jpg",
-    linkedinUrl: "https://www.linkedin.com/in/diya-joshi19/",
+    imageUrl: "/team/Gunn.jpg",
+    linkedinUrl: "https://www.linkedin.com/in/gunn-aggarwal-aa9421321/",
   },
   {
-    name: "Uday Goswami",
+    name: "Samanvaya Gupta",
     role: "Vice Chairperson",
-    imageUrl: "/team/uday.jpg",
+    imageUrl: "/team/Samanvaya.HEIC",
     linkedinUrl:
-      "https://www.linkedin.com/in/uday-goswami-91070b288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      "https://www.linkedin.com/in/samanvaya-gupta-00a3b3352?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
   },
 ];
 
