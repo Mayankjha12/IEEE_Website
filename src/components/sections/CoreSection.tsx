@@ -41,29 +41,29 @@ const generalSecretaries = {
   title: "General Secretaries",
   members: [
     {
-      name: "Aman Singh",
+      name: "Aarohi Jain",
       role: "General Secretary",
-      imageUrl: "/team/aman_singh.jpeg",
-      linkedinUrl: "https://www.linkedin.com/in/aman-singh-a5b5b428b/",
+      imageUrl: "/team/Aarohi.jpg",
+      linkedinUrl: "https://www.linkedin.com/in/aarohi-jain-415945326",
     },
     {
-      name: "Aryan Shekhar",
+      name: "Fareh Umama",
       role: "General Secretary",
-      imageUrl: "/team/aryan_s.jpeg",
+      imageUrl: "/team/Fareh.jpg",
       linkedinUrl:
-        "https://www.linkedin.com/feed/?lipi=urn%3Ali%3Apage%3Ap_mwlite_my_network%3BKGTo7d8wQWuJRUZ0HYuYxw%3D%3D",
+        "https://www.linkedin.com/in/fareh-umama/",
     },
     {
-      name: "Ritesh Singh Chaudhary",
+      name: "Md. Aftab Ansari",
       role: "General Secretary",
-      imageUrl: "/team/ritesh.jpeg",
-      linkedinUrl: "http://www.linkedin.com/in/ritesh-singh-chaudhary-rsc",
+      imageUrl: "/team/Aftab.jpeg",
+      linkedinUrl: "https://www.linkedin.com/in/md-aftab-ansari-58174a301/",
     },
     {
-      name: "Praket Mehta",
+      name: "Aakarsh Thukral",
       role: "General Secretary",
-      imageUrl: "/team/praket.jpg",
-      linkedinUrl: "https://www.linkedin.com/in/praket-mehta-679176260/",
+      imageUrl: "/team/Aakarsh.jpg",
+      linkedinUrl: "https://www.linkedin.com/in/aakarsh-thukral-90ba4a319/",
     },
   ],
 };
@@ -90,22 +90,16 @@ const departmentHeads = {
       name: "Creative",
       members: [
         {
-          name: "Anushka Jarwal",
-          imageUrl: "/team/anushka.jpg",
+          name: "Vanshika Goyal",
+          imageUrl: "/team/vanshika.jpg",
           linkedinUrl:
-            "https://www.linkedin.com/in/anushka-jarwal-17939b309?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            "https://www.linkedin.com/in/vanshika-goyal6",
         },
         {
-          name: "Kaushiki Chhabra",
+          name: "Gunika Anand",
           imageUrl: "/team/kaushiki.jpg",
           linkedinUrl:
-            "https://www.linkedin.com/in/kaushikichhabra?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-        },
-        {
-          name: "Mrinal Sharma",
-          imageUrl: "/team/mrinal.webp",
-          linkedinUrl:
-            "https://www.linkedin.com/in/mrinal-sharma-92376b287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            "https://www.linkedin.com/in/gunika-anand-7942ab275?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
         },
       ],
     },
