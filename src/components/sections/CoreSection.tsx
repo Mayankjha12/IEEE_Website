@@ -103,7 +103,7 @@ const departmentHeads = {
         },
         {
           name: "Anam Shoeb",
-          imageUrl: "/team/Gunika.jpg",
+          imageUrl: "/team/Anam.jpg",
           linkedinUrl:
             "https://in.linkedin.com/in/anam-shoeb-73a4b1335",
         },
@@ -285,7 +285,7 @@ const societies = [
       {
         name: "Paras Arora",
         role: "Vice Chairperson",
-        imageUrl: "/team/manas.jpg",
+        imageUrl: "/team/Paras.jpg",
         linkedinUrl: "https://www.linkedin.com/in/paras-arora-a75614255/",
       },
     ],
