@@ -11,10 +11,16 @@ const seniorHeads = [
     role : "Head of Technology",
   },
   {
-    name: "Shubham Khatri",
-    img: "/team/shubham.jpeg",
+    name: "Aarohi Jain",
+    img: "/team/Aarohi.jpg",
     linkedinUrl: "https://www.linkedin.com/in/shubham-t1920/",
-    role: "Head of Technology",
+    role: "General Secretary",
+  },
+  {
+    name: "Hemang Bhat",
+    img: "/team/Hemang_Bhat.jpeg",
+    linkedinUrl: "https://www.linkedin.com/in/shubham-t1920/",
+    role: "General Secretary",
   },
 ];
 
