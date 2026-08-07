@@ -204,7 +204,7 @@ const societies = [
       {
         name: "Vihaan Narayan",
         role: "Vice Chairperson",
-        imageUrl: "/team/Vihaan.jpg",
+        imageUrl: "/team/Vihaan.jpeg",
         linkedinUrl:
           "https://www.linkedin.com/in/vihaan-narayan-286427349/"
       },
