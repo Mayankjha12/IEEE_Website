@@ -54,9 +54,9 @@ const generalSecretaries = {
         "https://www.linkedin.com/in/fareh-umama/",
     },
     {
-      name: "Md. Aftab Ansari",
+      name: "MD Aftab Ansari",
       role: "General Secretary",
-      imageUrl: "/team/Aftab.jpeg",
+      imageUrl: "/team/Aftab.jpg",
       linkedinUrl: "https://www.linkedin.com/in/md-aftab-ansari-58174a301/",
     },
     {
