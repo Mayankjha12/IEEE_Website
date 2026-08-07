@@ -101,27 +101,27 @@ const departmentHeads = {
           linkedinUrl:
             "https://www.linkedin.com/in/gunika-anand-7942ab275?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
         },
+        {
+          name: "Anam Shoeb",
+          imageUrl: "/team/Gunika.jpg",
+          linkedinUrl:
+            "https://in.linkedin.com/in/anam-shoeb-73a4b1335",
+        },
       ],
     },
     {
       name: "Design",
       members: [
         {
-          name: "Aditya Yadav",
+          name: "Jay Singh Sikarwar",
           imageUrl: "/team/aditya_yadav.jpg",
           linkedinUrl:
-            "https://www.linkedin.com/in/aditya-yadav-712519306?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            "https://www.linkedin.com/in/jay-singh-sikarwar-2a4a28334/",
         },
         {
-          name: "Pavni Aggarwal",
+          name: "Sidhant Choudhary",
           imageUrl: "/team/pavni.jpg",
           linkedinUrl: "https://www.linkedin.com/in/pavni-aggarwal-abjhbqja/",
-        },
-        {
-          name: "Manik",
-          imageUrl: "/team/manik.png",
-          linkedinUrl:
-            "https://www.linkedin.com/in/manik-bhushan?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
         },
       ],
     },
@@ -129,20 +129,20 @@ const departmentHeads = {
       name: "External Relations",
       members: [
         {
-          name: "Aman Kumar",
+          name: "Deldan Chosdon",
           imageUrl: "/team/aman_kr.jpg",
-          linkedinUrl: "https://www.linkedin.com/in/aman-kumar-39b561294",
+          linkedinUrl: "https://www.linkedin.com/in/deldan-chosdon-b9490731b/",
         },
         {
-          name: "Kartik Kapil",
+          name: "Samya Wadhwa",
           imageUrl: "/team/kartik.jpeg",
           linkedinUrl:
-            "https://www.linkedin.com/in/kartik-kapil-a2b32b269?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+            "https://www.linkedin.com/in/samya-wadhwa-8a8427322/",
         },
         {
-          name: "Daivik Awasthi",
-          imageUrl: "/team/daivik.jpg",
-          linkedinUrl: "https://www.linkedin.com/in/daivik-awasthi",
+          name: "Janya Goel",
+          imageUrl: "/team/Janya.jpg",
+          linkedinUrl: "https://www.linkedin.com/in/janyagoel/",
         },
       ],
     },
@@ -150,31 +150,15 @@ const departmentHeads = {
       name: "Operations",
       members: [
         {
-          name: "Devansh Thakur",
-          imageUrl: "/team/devansh.jpeg",
+          name: "Vaibhav Ranjan",
+          imageUrl: "/team/Vaibhav_Ranjan.jpg",
           linkedinUrl:
-            "https://www.linkedin.com/in/devansh-thakur-588569224?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+            "https://www.linkedin.com/in/vaibhav-ranjan-65403a224/",
         },
         {
-          name: "Haaris Chaudhary",
+          name: "Ayush Yadav",
           imageUrl: "/team/haaris.jpeg",
-          linkedinUrl: "http://www.linkedin.com/in/hc0311",
-        },
-      ],
-    },
-    {
-      name: "Sponsorship",
-      members: [
-        {
-          name: "Mayank Gupta",
-          imageUrl: "/team/mayank.jpg",
-          linkedinUrl:
-            "https://www.linkedin.com/in/mayankgupta120404?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-        },
-        {
-          name: "Kundan Bansal",
-          imageUrl: "/team/kundan.jpeg",
-          linkedinUrl: "http://linkedin.com/in/kundanbansal1",
+          linkedinUrl: "https://www.linkedin.com/in/ayushyadav-2007-nsut/",
         },
       ],
     },
@@ -187,22 +171,22 @@ const societies = [
     type: "Chapter",
     members: [
       {
-        name: "Lakshya Bhatnagar",
+        name: "Ruhansh Bansal",
         role: "Chairperson",
-        imageUrl: "/team/lakshya.jpg",
-        linkedinUrl: "https://www.linkedin.com/in/lakshya-bhatnagar-b815b9297",
+        imageUrl: "/team/Ruhansh.jpg",
+        linkedinUrl: "https://www.linkedin.com/in/ruhanshbansal/",
       },
       {
-        name: "Aniket Negi",
+        name: "Pratik Biswal",
         role: "Vice Chairperson",
-        imageUrl: "/team/aniket.jpg",
-        linkedinUrl: "https://www.linkedin.com/in/aniketnegs/",
+        imageUrl: "/team/Pratik.jpg",
+        linkedinUrl: "https://www.linkedin.com/in/saipratik/",
       },
       {
-        name: "Anandini Kashyap",
+        name: "Sudhit Popli",
         role: "Secretary",
-        imageUrl: "/team/anandini.jpg",
-        linkedinUrl: "https://www.linkedin.com/in/anandini-kashyap-nsut/",
+        imageUrl: "/team/Sudhit.jpeg",
+        linkedinUrl: "https://www.linkedin.com/in/sudhit-popli-a2a9731ab",
       },
     ],
   },
@@ -211,18 +195,18 @@ const societies = [
     type: "Chapter",
     members: [
       {
-        name: "Eugal Shokeen",
+        name: "Punit",
         role: "Chairperson",
         imageUrl: "/team/eugal.jpg",
         linkedinUrl:
-          "https://www.linkedin.com/in/eugal-shokeen-a134b12a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+          "https://www.linkedin.com/in/punit0809/",
       },
       {
-        name: "Sujal Gulia",
+        name: "Vihaan Narayan",
         role: "Vice Chairperson",
-        imageUrl: "/team/sujal.jpg",
+        imageUrl: "/team/Vihaan.jpg",
         linkedinUrl:
-          "https://www.linkedin.com/in/sujal-gulia-7543b12ab?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+          "https://www.linkedin.com/in/vihaan-narayan-286427349/"
       },
     ],
   },
@@ -231,16 +215,16 @@ const societies = [
     type: "Affinity Group",
     members: [
       {
-        name: "Shriya Devarakonda",
+        name: "Vanshika Joras",
         role: "Chairperson",
         imageUrl: "/team/shriya.jpeg",
-        linkedinUrl: "http://www.linkedin.com/in/shriya-devarakonda-7a451628b",
+        linkedinUrl: "https://www.linkedin.com/in/vanshika-joras-703949323/"
       },
       {
-        name: "Khushneet Kaur",
+        name: "Akansha Gupta",
         role: "Vice Chairperson",
         imageUrl: "/team/khushneet.jpg",
-        linkedinUrl: "http://www.linkedin.com/in/khushneet-kaur-b4b194248",
+        linkedinUrl: "https://www.linkedin.com/in/akansha-gupta-1b672431b/",
       },
     ],
   },
@@ -249,22 +233,22 @@ const societies = [
     type: "Chapter",
     members: [
       {
-        name: "Adesh Kumar Pal",
+        name: "Tanmay Agarwal",
         role: "Chairperson",
-        imageUrl: "/team/adesh.jpg",
-        linkedinUrl: "https://www.linkedin.com/in/adeclak",
+        imageUrl: "/team/Tanmay.jpg",
+        linkedinUrl: "https://www.linkedin.com/in/tanmay-agarwal6626/",
       },
       {
-        name: "Aryan Baibaswata",
+        name: "Tijil Gupta",
         role: "Vice Chairperson",
         imageUrl: "/team/aryan_b.jpg",
-        linkedinUrl: "https://www.linkedin.com/in/aryan-baibaswata-299267281",
+        linkedinUrl: "https://www.linkedin.com/in/tijil-gupta/",
       },
       {
-        name: "Yash Garg",
+        name: "Riyansh Jain",
         role: "Secretary",
         imageUrl: "/team/yashg.jpg",
-        linkedinUrl: "https://www.linkedin.com/in/yashgarg2006/",
+        linkedinUrl: "https://www.linkedin.com/in/riyansh-jain-201796292/",
       },
     ],
   },
@@ -273,18 +257,18 @@ const societies = [
     type: "Chapter",
     members: [
       {
-        name: "Vaibhav Kumar Rajput",
+        name: "Saanch Mehta",
         role: "Chairperson",
-        imageUrl: "/team/vaibhav.jpeg",
+        imageUrl: "/team/Saanch.jpeg",
         linkedinUrl:
-          "https://www.linkedin.com/in/vaibhav-rajput06?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "https://www.linkedin.com/in/saanch-mehta-45a6a4323/",
       },
       {
-        name: "Aditi Sharma",
+        name: "Vedika Rawat",
         role: "Vice Chairperson",
-        imageUrl: "/team/aditi.jpg",
+        imageUrl: "/team/Vedika.jpg",
         linkedinUrl:
-          "https://www.linkedin.com/in/aditi-sharma-85610728b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+          "https://www.linkedin.com/in/vedikarawat/",
       },
     ],
   },
@@ -293,16 +277,16 @@ const societies = [
     type: "Chapter",
     members: [
       {
-        name: "Yash Sharma",
+        name: "Ozair Ali",
         role: "Chairperson",
-        imageUrl: "/team/yash.jpg",
-        linkedinUrl: "http://www.linkedin.com/in/yashsharma2402",
+        imageUrl: "/team/Ozair.jpg",
+        linkedinUrl: "https://www.linkedin.com/in/ozair-ali-180812285/",
       },
       {
-        name: "Manas Kumar",
+        name: "Paras Arora",
         role: "Vice Chairperson",
         imageUrl: "/team/manas.jpg",
-        linkedinUrl: "https://www.linkedin.com/in/manaskumar3003",
+        linkedinUrl: "https://www.linkedin.com/in/paras-arora-a75614255/",
       },
     ],
   },
@@ -312,24 +296,24 @@ const seniorMembers = {
   title: "Senior Executive Members",
   members: [
     {
-      name: "Dipshu Rakheja",
+      name: "Shikha Verma",
       role: "Senior Executive",
       imageUrl: "/team/dipshu.jpg",
       linkedinUrl:
-        "https://www.linkedin.com/in/dipshu-rakheja-132bb1288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        "https://www.linkedin.com/in/shikha-verma-431753342/",
     },
     {
-      name: "Hardik Vohra",
+      name: "Himanshi Meena",
       role: "Senior Executive",
       imageUrl: "/team/hardik.jpg",
-      linkedinUrl: "https://www.linkedin.com/in/hardik-vohra-52ba59195",
+      linkedinUrl: "https://www.linkedin.com/in/himanshi-meena-623a37342/",
     },
     {
-      name: "Love Kumar",
+      name: "Vaibhav Singh",
       role: "Senior Executive",
       imageUrl: "/team/love1.jpg",
       linkedinUrl:
-        "https://www.linkedin.com/in/love-kumar-210240165?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+        "https://www.linkedin.com/in/vaibhav-singh-91119b25a/",
     },
   ],
 };
