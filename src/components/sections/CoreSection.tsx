@@ -91,13 +91,13 @@ const departmentHeads = {
       members: [
         {
           name: "Vanshika Goyal",
-          imageUrl: "/team/vanshika.jpg",
+          imageUrl: "/team/Vanshika.jpg",
           linkedinUrl:
             "https://www.linkedin.com/in/vanshika-goyal6",
         },
         {
           name: "Gunika Anand",
-          imageUrl: "/team/kaushiki.jpg",
+          imageUrl: "/team/Gunika.jpg",
           linkedinUrl:
             "https://www.linkedin.com/in/gunika-anand-7942ab275?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
         },
