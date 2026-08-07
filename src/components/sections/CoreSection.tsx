@@ -311,7 +311,7 @@ const seniorMembers = {
     {
       name: "Vaibhav Singh",
       role: "Senior Executive",
-      imageUrl: "/team/love1.jpg",
+      imageUrl: "/team/Vaibhav.jpg",
       linkedinUrl:
         "https://www.linkedin.com/in/vaibhav-singh-91119b25a/",
     },
