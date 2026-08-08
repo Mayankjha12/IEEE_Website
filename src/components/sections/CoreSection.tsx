@@ -6,7 +6,7 @@ const executiveCouncil = [
   {
     name: "Tushti Arora",
     role: "Vice Chairperson",
-    imageUrl: "/team/anushka.jpg",
+    imageUrl: "/team/TushtiArora.jpg",
     linkedinUrl: "https://www.linkedin.com/in/tushtiarora",
   },
   {
@@ -114,7 +114,7 @@ const departmentHeads = {
       members: [
         {
           name: "Jay Singh Sikarwar",
-          imageUrl: "/team/aditya_yadav.jpg",
+          imageUrl: "/team/jay singh.jpg",
           linkedinUrl:
             "https://www.linkedin.com/in/jay-singh-sikarwar-2a4a28334/",
         },
@@ -130,7 +130,7 @@ const departmentHeads = {
       members: [
         {
           name: "Deldan Chosdon",
-          imageUrl: "/team/aman_kr.jpg",
+          imageUrl: "/team/Deldan.PNG",
           linkedinUrl: "https://www.linkedin.com/in/deldan-chosdon-b9490731b/",
         },
         {
@@ -197,7 +197,7 @@ const societies = [
       {
         name: "Punit",
         role: "Chairperson",
-        imageUrl: "/team/eugal.jpg",
+        imageUrl: "/team/Punit.JPG",
         linkedinUrl:
           "https://www.linkedin.com/in/punit0809/",
       },
