@@ -135,7 +135,7 @@ const departmentHeads = {
         },
         {
           name: "Samya Wadhwa",
-          imageUrl: "/team/kartik.jpeg",
+          imageUrl: "/team/samya.jpeg",
           linkedinUrl:
             "https://www.linkedin.com/in/samya-wadhwa-8a8427322/",
         },
@@ -157,7 +157,7 @@ const departmentHeads = {
         },
         {
           name: "Ayush Yadav",
-          imageUrl: "/team/haaris.jpeg",
+          imageUrl: "/team/Ayush_yadav.jpeg",
           linkedinUrl: "https://www.linkedin.com/in/ayushyadav-2007-nsut/",
         },
       ],
