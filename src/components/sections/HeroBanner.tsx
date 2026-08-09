@@ -125,7 +125,7 @@ export default function HeroBanner() {
             boxShadow: "0 0 25px rgba(14,165,233,.45)",
           }}
           whileTap={{ scale: 0.96 }}
-          className="mt-5 rounded-full bg-sky-500 px-6 py-3 text-base font-semibold text-white transition-all duration-300 hover:bg-sky-600"
+          className="mt-5 rounded-full bg-sky-500 px-6 py-3 text-base font-extrabold text-white transition-all duration-300 hover:bg-sky-600"
         >
           <a
             href="https://industrial-ideathon-vjo4um39jvw5x7x.s3.us-east-1.amazonaws.com/statics/IEEE-NSUT-App-beta.apk"
