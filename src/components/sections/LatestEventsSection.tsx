@@ -38,27 +38,18 @@ const POOLS: Record<string, string[]> = {
     '/images/smartsensing_event1.jpg',
     '/images/smartsensing_event2.jpg',
     '/images/smartsensing_event3.jpg',
-    '/images/smartsensing_event4.jpg',
-    '/images/smartsensing_event5.jpg',
-    '/images/smartsensing_event6.jpg',
   ],
 
   leadershipconclave: [
     '/images/leadershipconclave_event1.jpg',
     '/images/leadershipconclave_event2.jpg',
     '/images/leadershipconclave_event3.jpg',
-    '/images/leadershipconclave_event4.jpg',
-    '/images/leadershipconclave_event5.jpg',
-    '/images/leadershipconclave_event6.jpg',
   ],
 
   hilsttp: [
     '/images/hilsttp_event1.jpg',
     '/images/hilsttp_event2.jpg',
     '/images/hilsttp_event3.jpg',
-    '/images/hilsttp_event4.jpg',
-    '/images/hilsttp_event5.jpg',
-    '/images/hilsttp_event6.jpg',
   ],
 
   dsaverse: [
@@ -82,10 +73,6 @@ const POOLS: Record<string, string[]> = {
   ieeeday: [
     '/images/ieeeday_event1.jpg',
     '/images/ieeeday_event2.jpg',
-    '/images/ieeeday_event3.jpg',
-    '/images/ieeeday_event4.jpg',
-    '/images/ieeeday_event5.jpg',
-    '/images/ieeeday_event6.jpg',
   ],
 
   cipherquest: [
