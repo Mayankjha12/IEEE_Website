@@ -40,18 +40,8 @@ export default function HeroBanner() {
       id="home"
       className="relative w-full min-h-fit overflow-hidden bg-black pt-44 md:pt-56 pb-16 md:pb-24"
     >
-      {/* Main Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#03040A] via-[#050816] to-[#020308]" />
-
-      {/* Left Glow */}
-      <div className="absolute -left-48 bottom-0 h-[500px] w-[500px] rounded-full bg-blue-700/20 blur-[180px]" />
-
-      {/* Right Glow */}
-      <div className="absolute -right-48 bottom-0 h-[500px] w-[500px] rounded-full bg-blue-700/20 blur-[180px]" />
-
-      {/* Center Glow */}
-      <div className="absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-500/5 blur-[170px]" />
-
+     {/* Clean black background */}
+<div className="absolute inset-0 bg-black" />
       <div className="relative z-10 mx-auto flex max-w-6xl flex-col items-center px-4 text-center">
         {/* IEEE Logo */}
         <motion.a
@@ -135,48 +125,52 @@ export default function HeroBanner() {
           </a>
         </MotionButton>
 
-        {/* Core Team Image */}
         <motion.div
-          ref={imageContainerRef}
-          initial={{
-            opacity: 0,
-            y: 60,
-            scale: 0.96,
-          }}
-          animate={
-            isInView
-              ? {
-                  opacity: 1,
-                  y: 0,
-                  scale: 1,
-                }
-              : {}
-          }
-          transition={{
-            duration: 1,
-            ease: [0.22, 1, 0.36, 1],
-          }}
-          className="mt-14 w-full max-w-6xl"
-        >
-          <div className="relative aspect-[21/9] overflow-hidden rounded-2xl shadow-[0_25px_80px_rgba(0,0,0,.45)]">
-            <Image
-              src="/NewCoreMembers.jpeg"
-              alt="IEEE NSUT Core Team"
-              width={1800}
-              height={800}
-              priority
-              sizes="(max-width:768px) 100vw, 1200px"
-              className="
-                w-full
-                h-full
-                object-cover
-                object-center
-              "
-            />
+  ref={imageContainerRef}
+  initial={{
+    opacity: 1,
+  }}
+  animate={
+    isInView
+      ? {
+          opacity: 1,
+        }
+      : {}
+  }
+  className="mt-14 w-full max-w-6xl"
+>
 
-            {/* Subtle Bottom Shadow */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent pointer-events-none" />
-          </div>
+          <div className="relative aspect-[21/9] overflow-hidden rounded-2xl shadow-[0_25px_80px_rgba(0,0,0,.45)]">
+
+  {/* Right → Left Image Reveal */}
+  <motion.div
+    initial={{
+      clipPath: "inset(0 0 0 100%)",
+    }}
+    animate={
+      isInView
+        ? {
+            clipPath: "inset(0 0 0 0%)",
+          }
+        : {}
+    }
+    transition={{
+      duration: 1.5,
+      ease: [0.22, 1, 0.36, 1],
+    }}
+    className="absolute inset-0"
+  >
+    <Image
+      src="/NewCoreMembers.jpeg"
+      alt="IEEE NSUT Core Team"
+      fill
+      priority
+      sizes="(max-width:768px) 100vw, 1200px"
+      className="object-cover object-center"
+    />
+  </motion.div>
+
+</div>
         </motion.div>
       </div>
     </section>
