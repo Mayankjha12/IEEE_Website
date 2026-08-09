@@ -53,21 +53,14 @@ const POOLS: Record<string, string[]> = {
   ],
 
   dsaverse: [
-    '/images/dsaverse_event1.jpg',
-    '/images/dsaverse_event2.jpg',
-    '/images/dsaverse_event3.jpg',
-    '/images/dsaverse_event4.jpg',
-    '/images/dsaverse_event5.jpg',
-    '/images/dsaverse_event6.jpg',
+    '/images/IEEE NSUT Yearly Report.jpg',
+    '/images/IEEE NSUT Yearly Report (1).jpg',
+    '/images/IEEE NSUT Yearly Report (2).jpg',
+    '/images/IEEE NSUT Yearly Report (3).jpg',
   ],
 
   dataverse: [
-    '/images/dataverse_event1.jpg',
-    '/images/dataverse_event2.jpg',
-    '/images/dataverse_event3.jpg',
-    '/images/dataverse_event4.jpg',
-    '/images/dataverse_event5.jpg',
-    '/images/dataverse_event6.jpg',
+    '/images/IEEE NSUT Yearly Report (5).jpg',
   ],
 
   ieeeday: [
@@ -76,12 +69,10 @@ const POOLS: Record<string, string[]> = {
   ],
 
   cipherquest: [
-    '/images/cipherquest_event1.jpg',
-    '/images/cipherquest_event2.jpg',
-    '/images/cipherquest_event3.jpg',
-    '/images/cipherquest_event4.jpg',
-    '/images/cipherquest_event5.jpg',
-    '/images/cipherquest_event6.jpg',
+    '/images/IEEE NSUT Yearly Report (6).jpg',
+    '/images/IEEE NSUT Yearly Report (7).jpg',
+    '/images/IEEE NSUT Yearly Report (8).jpg',
+    '/images/IEEE NSUT Yearly Report (9).jpg',
   ],
 
   aiethics: [
