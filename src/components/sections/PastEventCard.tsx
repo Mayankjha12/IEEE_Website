@@ -87,7 +87,7 @@ interface Event {
 const events: Event[] = [
   {
     id: "1",
-    img: "/images/tensymp.jpg",
+    img: "/images/tensymp1.jpg",
     title: "Tensymp'24",
     desc: "IEEE TENSYMP'24 is a premier international conference co-hosted by NSUT, bringing together researchers, academicians, industry professionals, and students from around the world to present research, exchange ideas, and explore emerging technologies.",
     date: "2024",
@@ -119,7 +119,7 @@ const events: Event[] = [
   },
   {
     id: "3",
-    img: "/images/dssywlc.jpg",
+    img: "/images/dssywlc4.jpg",
     title: "DSSYWLC",
     desc: "IEEE DSSYWLC'25 is a two-day congress bringing together students, young professionals, women in engineering, life members, and industry leaders from across North India. The event provides opportunities for networking, learning, collaboration, and professional growth.",
     date: "20–21 JUN",
@@ -151,7 +151,7 @@ const events: Event[] = [
   },
   {
     id: "5",
-    img: "/images/hackvision.jpg",
+    img: "/images/hackvision.jpeg",
     title: "HackVision",
     desc: "HackVision 2025 is a national offline hackathon by IEEE NSUT challenging students to build high-impact prototypes for real-world technical and social problems. Teams worked with AI/ML, IoT, and data analytics while receiving guidance from industry mentors.",
     date: "2025",
@@ -167,7 +167,7 @@ const events: Event[] = [
   },
   {
     id: "6",
-    img: "/images/algoverse.jpg",
+    img: "/images/algoverse2.jpg",
     title: "AlgoVerse 4.0",
     desc: "AlgoVerse 4.0 is IEEE NSUT's daily coding bootcamp designed to build strong DSA fundamentals through consistent problem-solving. The bootcamp focuses on algorithmic intuition, complexity trade-offs, optimization, edge cases, and peer learning.",
     date: "2025",
