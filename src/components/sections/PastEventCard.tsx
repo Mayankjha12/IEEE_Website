@@ -87,64 +87,148 @@ interface Event {
 const events: Event[] = [
   {
     id: "1",
-    img: "/images/tensymp.png",
+    img: "/images/tensymp.jpg",
     title: "Tensymp'24",
-    desc: "IEEE TENSYMP'24, is a premier symposium showcasing cutting-edge technological advancements, fostering global collaboration, and empowering researchers, professionals, and students through insightful sessions, workshops, and networking opportunities across diverse domains.",
-    date: "12 MAR",
+    desc: "IEEE TENSYMP'24 is a premier international conference co-hosted by NSUT, bringing together researchers, academicians, industry professionals, and students from around the world to present research, exchange ideas, and explore emerging technologies.",
+    date: "2024",
     year: "2024",
-    theme: "Technology & Innovation",
-    venue: "Main Auditorium, NSUT",
-    highlights: ["Over 500+ participants from 10 countries", "Interactive coding sessions and hackathons", "Keynote speeches by industry leaders"],
-    chiefGuests: ["Dr. Anuradha Tomar", "Dr. Prerna Gaur"],
-    gallery: ["/images/image1.jpg", "/images/image2.png", "/images/image4.png", "/images/image5.png"]
+    theme: "International Conference",
+    venue: "ITC WelcomHotel, Dwarka (Day 1) & NSUT (Days 2–3), New Delhi",
+    highlights: [
+      "Delegates from 40+ countries",
+      "900+ research paper submissions",
+      "AI for Social Good discussions and technical sessions",
+      "Women in Engineering (WIE) forums and mock interviews",
+    ],
   },
   {
     id: "2",
-    img: "/images/dssywlc.png",
-    title: "DSSYWLC'24",
-    desc: "IEEE DSSYWLC is a dynamic event focused on networking, knowledge-sharing, and community building through technical symposiums, discussions and cultural festivities.",
-    date: "5 APR",
-    year: "2024",
-    theme: "Networking & Community",
-    venue: "APJ Abdul Kalam Block",
-    highlights: ["Cultural festivities and technical symposiums", "Interactive panel discussions"]
+    img: "/images/techweek.jpg",
+    title: "TechWeek",
+    desc: "Tech Week is IEEE NSUT's flagship cross-disciplinary technical initiative, featuring a week-long series of workshops, competitions, challenges, and events across diverse technology domains. Its flagship HackNSUT hackathon brings students together for an intensive collaborative innovation experience.",
+    date: "2025",
+    year: "2025",
+    theme: "Technology & Innovation",
+    venue: "Netaji Subhas University of Technology (NSUT), Main Campus",
+    highlights: [
+      "Week-long series of technical workshops and competitions",
+      "HackNSUT flagship hackathon",
+      "1,000+ participants from 300+ universities",
+      "30-hour challenge with mentorship and collaboration",
+    ],
   },
   {
     id: "3",
-    img: "/images/image2.png",
-    title: "Algoverse 3.0",
-    desc: "IEEE NSUT AlgoVerse is a vibrant, community-driven initiative that provides an engaging and structured platform to thoroughly master DSA through consistent, daily problem-solving challenges like Problem of the Day (POTD), fostering both collaboration and growth.",
-    date: "22 APR",
-    year: "2024",
-    theme: "Competitive Coding",
-    venue: "CS Lab 2, NSUT",
-    highlights: ["Daily problem-solving challenges (POTD)", "Live leaderboard tracking", "Prizes for top 3 competitive coders"],
-    chiefGuests: ["Prof. XYZ"],
-    gallery: ["/images/image2.png", "/images/image4.png"]
+    img: "/images/dssywlc.jpg",
+    title: "DSSYWLC",
+    desc: "IEEE DSSYWLC'25 is a two-day congress bringing together students, young professionals, women in engineering, life members, and industry leaders from across North India. The event provides opportunities for networking, learning, collaboration, and professional growth.",
+    date: "20–21 JUN",
+    year: "2026",
+    theme: "Leadership & Community",
+    venue: "Netaji Subhas University of Technology (NSUT), New Delhi",
+    highlights: [
+      "Keynote talks and expert sessions",
+      "Networking with professionals and academic leaders",
+      "Participants from 8 North Indian regions",
+      "Competitions and collaborative activities",
+    ],
   },
   {
     id: "4",
-    img: "/images/pedal.png",
-    title: "Pedal Playground",
-    desc: "Pedal Playground, organized by IEEE NSUT in collaboration with Crescendo, is an interactive workshop exploring the art of sound design and audio synthesis through pedals. Dive into creative experimentation, music tech.",
-    date: "9 MAY",
-    year: "2024",
-    theme: "Sound Design",
-    venue: "Mini Auditorium",
-    highlights: ["Hands-on workshop with sound synthesis", "Collaboration with Crescendo"],
-    gallery: ["/images/image5.png"]
+    img: "/images/hack4delhi.jpg",
+    title: "Hack4Delhi",
+    desc: "Hack4Delhi is a nationwide civic-tech hackathon by IEEE NSUT and HN India, empowering students to build technology for public governance and democratic systems. The event connected student innovation with real-world civic challenges and policymakers.",
+    date: "2025",
+    year: "2025",
+    theme: "Civic & Governance Tech",
+    venue: "Civic Centre, New Delhi (Finale)",
+    highlights: [
+      "4.8K+ registrations nationwide",
+      "78 finalist teams",
+      "Civic/Governance Tech, AI and One Nation One Election tracks",
+      "₹2,70,000 total prize pool",
+    ],
   },
   {
     id: "5",
-    img: "/images/image1.jpg",
-    title: "AI Summit 2025",
-    desc: "A summit discussing the future of AI and machine learning across industries. Connect with leading researchers and industry professionals.",
-    date: "15 JAN",
+    img: "/images/hackvision.jpg",
+    title: "HackVision",
+    desc: "HackVision 2025 is a national offline hackathon by IEEE NSUT challenging students to build high-impact prototypes for real-world technical and social problems. Teams worked with AI/ML, IoT, and data analytics while receiving guidance from industry mentors.",
+    date: "2025",
     year: "2025",
-    theme: "Artificial Intelligence",
-    venue: "Main Auditorium, NSUT",
-    highlights: ["Future of AI across global industries", "Connect with leading researchers"]
-  }
+    theme: "Hackathon",
+    venue: "NSUT Campus",
+    highlights: [
+      "1,072+ registrations nationwide",
+      "70 shortlisted teams",
+      "8-hour coding marathon",
+      "Industry mentoring and prototype development",
+    ],
+  },
+  {
+    id: "6",
+    img: "/images/algoverse.jpg",
+    title: "AlgoVerse 4.0",
+    desc: "AlgoVerse 4.0 is IEEE NSUT's daily coding bootcamp designed to build strong DSA fundamentals through consistent problem-solving. The bootcamp focuses on algorithmic intuition, complexity trade-offs, optimization, edge cases, and peer learning.",
+    date: "2025",
+    year: "2025",
+    theme: "DSA Bootcamp",
+    venue: "Online",
+    highlights: [
+      "Daily Problem of the Day (POTD)",
+      "Strong DSA and algorithmic foundations",
+      "Focus on optimization and complexity",
+      "Consistent practice and peer learning",
+    ],
+  },
+  {
+    id: "7",
+    img: "/images/waveworks.jpg",
+    title: "WaveWorks",
+    desc: "WaveWorks is a hands-on electronics bootcamp by IEEE NSUT that bridges classroom theory with industry-standard electronics engineering. Participants progress from circuit fundamentals and LTspice simulation to analog design, digital logic, and Verilog HDL.",
+    date: "2025",
+    year: "2025",
+    theme: "Electronics & Hardware",
+    venue: "Online",
+    highlights: [
+      "Circuit fundamentals and component basics",
+      "LTspice simulation",
+      "Analog and digital circuit design",
+      "Verilog HDL and hardware design",
+    ],
+  },
+  {
+    id: "8",
+    img: "/images/neuralnexus.jpg",
+    title: "Neural Nexus 2.0",
+    desc: "Neural Nexus 2.0 is IEEE NSUT's Machine Learning bootcamp taking participants from Python fundamentals and data preprocessing to supervised and unsupervised learning and deep learning through a structured, hands-on roadmap.",
+    date: "2025",
+    year: "2025",
+    theme: "Machine Learning",
+    venue: "Online",
+    highlights: [
+      "Python and data preprocessing",
+      "Regression, classification and clustering",
+      "Deep learning and CNNs",
+      "Weekly quizzes and practical assignments",
+    ],
+  },
+  {
+    id: "9",
+    img: "/images/webwizards.jpg",
+    title: "Web Wizards 3.0",
+    desc: "Web Wizards 3.0 is a 20-week full-stack bootcamp by IEEE NSUT taking beginners from HTML and CSS fundamentals to production-ready applications. Participants learn modern web technologies through daily tasks, milestone projects, and a final capstone.",
+    date: "2025",
+    year: "2025",
+    theme: "Full-Stack Development",
+    venue: "Online",
+    highlights: [
+      "HTML, CSS and JavaScript",
+      "React, Node.js, Express and MongoDB",
+      "Authentication, deployment and CI/CD",
+      "Capstone project and production-ready applications",
+    ],
+  },
 ];
 
 // PCB Pattern
@@ -393,15 +477,15 @@ export default function PastEvents() {
 
       {/* Header */}
       <div className="w-full max-w-6xl mx-auto flex flex-col items-center text-center z-10 mb-8 md:mb-12 px-6">
-  <Heading className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl mb-4 font-bold leading-tight tracking-tight">
-    Crafting Excellence: Pioneering Events by IEEE NSUT
-  </Heading>
+  <Heading className="text-4xl md:text-5xl lg:text-6xl mb-6 font-bold leading-tight tracking-tight">
+  Crafting Excellence: Pioneering Events by IEEE NSUT
+</Heading>
 
-  <Paragraph className="max-w-4xl text-gray-400 text-base sm:text-lg md:text-xl leading-relaxed">
-    A showcase of innovation, learning, and collaboration. IEEE NSUT&apos;s
-    events create opportunities for meaningful networking, hands-on
-    skill-building, immersive learning, and real-world problem-solving.
-  </Paragraph>
+  <Paragraph className="max-w-4xl text-gray-400 text-lg md:text-xl leading-relaxed">
+  From international conferences and flagship hackathons to hands-on bootcamps
+  and technical workshops, IEEE NSUT creates platforms where students learn,
+  innovate, collaborate, and turn ideas into real-world impact.
+</Paragraph>
 </div>
 
       {/* Event Cards */}
