@@ -8,7 +8,6 @@ import { Button } from "../ui/button";
 const MotionButton = motion.create(Button);
 const MotionImage = motion.create(Image);
 
-
 const wordVariant: Variants = {
   hidden: {
     opacity: 0,
@@ -18,7 +17,6 @@ const wordVariant: Variants = {
   show: (i: number) => ({
     opacity: 1,
     y: 0,
-
     transition: {
       delay: i * 0.2,
       duration: 0.7,
@@ -27,17 +25,16 @@ const wordVariant: Variants = {
   }),
 };
 
-
 export default function HeroBanner() {
-  
-
   const imageContainerRef = useRef<HTMLDivElement>(null);
 
   const isInView = useInView(imageContainerRef, {
     once: true,
     amount: 0.2,
   });
+
   const title = "Welcome to IEEE NSUT";
+
   return (
     <section
       id="home"
@@ -55,10 +52,8 @@ export default function HeroBanner() {
       {/* Center Glow */}
       <div className="absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-500/5 blur-[170px]" />
 
-      {/* FIXED: Removed the premature closing tag here so that all internal items center correctly */}
       <div className="relative z-10 mx-auto flex max-w-6xl flex-col items-center px-4 text-center">
-        
-      
+        {/* IEEE Logo */}
         <motion.a
           href="https://www.ieee.org/"
           target="_blank"
@@ -82,6 +77,7 @@ export default function HeroBanner() {
           />
         </motion.a>
 
+        {/* Main Heading */}
         <motion.h1
           initial="hidden"
           animate="show"
@@ -103,6 +99,7 @@ export default function HeroBanner() {
           ))}
         </motion.h1>
 
+        {/* Description */}
         <motion.p
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
@@ -115,6 +112,7 @@ export default function HeroBanner() {
           an impact.
         </motion.p>
 
+        {/* Download App Button */}
         <MotionButton
           asChild
           initial={{ opacity: 0, y: 25 }}
@@ -131,9 +129,13 @@ export default function HeroBanner() {
             href="https://industrial-ideathon-vjo4um39jvw5x7x.s3.us-east-1.amazonaws.com/statics/IEEE-NSUT-App-beta.apk"
             download="IEEE-NSUT-App.apk"
           >
-            Download the IEEE NSUT App
+            <span className="font-extrabold">
+              Download the IEEE NSUT App
+            </span>
           </a>
         </MotionButton>
+
+        {/* Core Team Image */}
         <motion.div
           ref={imageContainerRef}
           initial={{
@@ -157,67 +159,26 @@ export default function HeroBanner() {
           className="mt-14 w-full max-w-6xl"
         >
           <div className="relative aspect-[21/9] overflow-hidden rounded-2xl shadow-[0_25px_80px_rgba(0,0,0,.45)]">
-
             <Image
-              src="/CoreMembers.jpg"
-              alt="IEEE NSUT Event"
+              src="/NewCoreMembers.jpeg"
+              alt="IEEE NSUT Core Team"
               width={1800}
               height={800}
               priority
               sizes="(max-width:768px) 100vw, 1200px"
               className="
-                cursor-zoom-in
                 w-full
                 h-full
                 object-cover
                 object-center
-                scale-[1.18]
-                -translate-y-[8%]
-                transition-all
-                duration-700
-                ease-out
-                hover:scale-[1.22]
-                hover:-translate-y-[9%]
               "
             />
 
-            {/* Top Highlight */}
-            <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-transparent pointer-events-none" />
-
-            {/* Bottom Shadow */}
+            {/* Subtle Bottom Shadow */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent pointer-events-none" />
-
-            <motion.div
-              initial={{ x: "-250%", y: "-10%" }}
-              animate={{ x: "250%", y: "10%" }}
-              transition={{
-                duration: 3.5,
-                repeat: Infinity,
-                repeatDelay: 5,
-                ease: "linear",
-              }}
-              className="absolute inset-0 overflow-hidden pointer-events-none"
-            >
-              <div
-                className="
-                  absolute
-                  top-[-35%]
-                  left-0
-                  h-[180%]
-                  w-32
-                  rotate-[25deg]
-                  bg-gradient-to-r
-                  from-transparent
-                  via-white/20
-                  to-transparent
-                  blur-md
-                "
-              />
-            </motion.div>
-
           </div>
         </motion.div>
-      </div> 
+      </div>
     </section>
   );
 }
