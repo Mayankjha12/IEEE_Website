@@ -132,9 +132,9 @@ const FeatureCard = ({
       animate={parentInView ? "visible" : "hidden"}
       variants={cardVariants}
       className={cn(
-        "rounded-3xl border-4 shadow-2xl px-7 py-7 sm:px-12 sm:py-9",
+        "rounded-3xl border-2 shadow-2xl px-6 py-5 sm:px-8 sm:py-6",
         "transition-all duration-500",
-        "w-full flex items-center gap-7 sm:gap-9",
+        "w-full flex items-center gap-5 sm:gap-6",
         "backdrop-blur-sm bg-opacity-90",
         color.bg,
         color.border
@@ -147,7 +147,7 @@ const FeatureCard = ({
         animate="wobble"
         variants={iconWobbleVariants}
         className={cn(
-          "flex-shrink-0 w-14 h-14 sm:w-24 sm:h-24 rounded-2xl",
+          "flex-shrink-0 w-14 h-14 sm:w-20 sm:h-20 rounded-2xl",
           "flex items-center justify-center shadow-lg",
           color.iconBg
         )}
@@ -212,7 +212,7 @@ const WhyChooseUs = () => {
         </Heading>
 
         <motion.div
-          className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 relative"
+          className="w-full grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 relative"
           initial="hidden"
           animate={isSectionInView ? "visible" : "hidden"}
         >
