@@ -149,9 +149,9 @@ export default function Header() {
                   scale: 0.95,
                 }}
                 className={cn(
-                  "hidden md:inline-flex items-center justify-center bg-sky-500 text-white px-6 py-3 text-lg font-semibold rounded-full border border-white/10 shadow-lg cursor-pointer",
-                  "transition-all duration-300 relative overflow-hidden group"
-                )}
+  "hidden md:inline-flex items-center justify-center bg-sky-500 text-white px-7 py-3 text-lg font-bold rounded-full border border-sky-300/30 shadow-[0_0_18px_rgba(14,165,233,0.35)] cursor-pointer",
+  "transition-all duration-300 relative overflow-hidden group hover:bg-sky-400"
+)}
               >
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/10 to-white/0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
                 Join Now
