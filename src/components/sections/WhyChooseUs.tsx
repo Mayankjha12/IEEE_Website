@@ -148,7 +148,7 @@ const FeatureCard = ({
       className={cn(
         "rounded-3xl border-2 shadow-2xl px-6 py-5 sm:px-8 sm:py-6",
         "transition-all duration-500",
-        "w-full flex items-center gap-5 sm:gap-6",
+        "w-full flex items-start gap-5 sm:gap-6",
         "backdrop-blur-sm bg-opacity-90",
         color.bg,
         color.border
