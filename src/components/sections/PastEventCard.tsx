@@ -392,14 +392,17 @@ export default function PastEvents() {
       `}</style>
 
       {/* Header */}
-      <div className="w-full max-w-7xl mx-auto flex flex-col items-center text-center z-10 mb-6 md:mb-10 px-6">
-        <Heading className="text-4xl md:text-5xl lg:text-6xl mb-6 font-bold leading-tight tracking-tight">
-          Crafting Excellence: Pioneering Events by IEEE NSUT
-        </Heading>
-        <Paragraph className="max-w-4xl text-gray-400 text-lg md:text-xl leading-relaxed">
-          A Showcase of Innovation, Learning, and Collaboration. With a strong focus on excellence and innovation, IEEE NSUT&apos;s events provide truly unparalleled opportunities for meaningful networking, hands-on skill-building, immersive learning, and effective real-world problem-solving.
-        </Paragraph>
-      </div>
+      <div className="w-full max-w-6xl mx-auto flex flex-col items-center text-center z-10 mb-8 md:mb-12 px-6">
+  <Heading className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl mb-4 font-bold leading-tight tracking-tight">
+    Crafting Excellence: Pioneering Events by IEEE NSUT
+  </Heading>
+
+  <Paragraph className="max-w-4xl text-gray-400 text-base sm:text-lg md:text-xl leading-relaxed">
+    A showcase of innovation, learning, and collaboration. IEEE NSUT&apos;s
+    events create opportunities for meaningful networking, hands-on
+    skill-building, immersive learning, and real-world problem-solving.
+  </Paragraph>
+</div>
 
       {/* Event Cards */}
       <div className="relative w-full flex-1 flex flex-col mt-6 md:mt-10">
