@@ -35,76 +35,76 @@ const mkTiles = (ev: any, s: number) => ({
 
 const POOLS: Record<string, string[]> = {
   smartsensing: [
-  '1526374965328-7f61d4dc18c5',
-  '1555949963-aa79dcee981c',
-  '1528901166007-3784c7dd3653',
-  '1492684223066-81342ee5ff30',
-  '1543269865-cbf427effbad',
-  '1504384308090-c894fdcc538d'
-],
+    '/images/smartsensing_event1.jpg',
+    '/images/smartsensing_event2.jpg',
+    '/images/smartsensing_event3.jpg',
+    '/images/smartsensing_event4.jpg',
+    '/images/smartsensing_event5.jpg',
+    '/images/smartsensing_event6.jpg',
+  ],
 
-leadershipconclave: [
-  '1511578314322-379afb476865',
-  '1587825140708-dfaf72ae4b04',
-  '1540575467063-178a50c2df87',
-  '1521737604893-d14cc237f11d',
-  '1475721027785-f74eccf877e2',
-  '1478737270239-2f02b77fc618'
-],
+  leadershipconclave: [
+    '/images/leadershipconclave_event1.jpg',
+    '/images/leadershipconclave_event2.jpg',
+    '/images/leadershipconclave_event3.jpg',
+    '/images/leadershipconclave_event4.jpg',
+    '/images/leadershipconclave_event5.jpg',
+    '/images/leadershipconclave_event6.jpg',
+  ],
 
-hilsttp: [
-  '1528901166007-3784c7dd3653',
-  '1492684223066-81342ee5ff30',
-  '1543269865-cbf427effbad',
-  '1504384308090-c894fdcc538d',
-  '1461749280684-dccba630e2f6',
-  '1515187029135-18ee286d815b'
-],
+  hilsttp: [
+    '/images/hilsttp_event1.jpg',
+    '/images/hilsttp_event2.jpg',
+    '/images/hilsttp_event3.jpg',
+    '/images/hilsttp_event4.jpg',
+    '/images/hilsttp_event5.jpg',
+    '/images/hilsttp_event6.jpg',
+  ],
 
-dsaverse: [
-  '1461749280684-dccba630e2f6',
-  '1504384308090-c894fdcc538d',
-  '1492684223066-81342ee5ff30',
-  '1543269865-cbf427effbad',
-  '1528901166007-3784c7dd3653',
-  '1517048676732-d65bc937f952'
-],
+  dsaverse: [
+    '/images/dsaverse_event1.jpg',
+    '/images/dsaverse_event2.jpg',
+    '/images/dsaverse_event3.jpg',
+    '/images/dsaverse_event4.jpg',
+    '/images/dsaverse_event5.jpg',
+    '/images/dsaverse_event6.jpg',
+  ],
 
-dataverse: [
-  '1526378722484-bd91ca387e72',
-  '1555949963-aa79dcee981c',
-  '1523240795612-9a054b0db644',
-  '1571260899304-425eee4c7efc',
-  '1519389950473-47ba0277781c',
-  '1475721027785-f74eccf877e2'
-],
+  dataverse: [
+    '/images/dataverse_event1.jpg',
+    '/images/dataverse_event2.jpg',
+    '/images/dataverse_event3.jpg',
+    '/images/dataverse_event4.jpg',
+    '/images/dataverse_event5.jpg',
+    '/images/dataverse_event6.jpg',
+  ],
 
-ieeeday: [
-  '1511578314322-379afb476865',
-  '1587825140708-dfaf72ae4b04',
-  '1521737604893-d14cc237f11d',
-  '1540575467063-178a50c2df87',
-  '1478737270239-2f02b77fc618',
-  '1475721027785-f74eccf877e2'
-],
+  ieeeday: [
+    '/images/ieeeday_event1.jpg',
+    '/images/ieeeday_event2.jpg',
+    '/images/ieeeday_event3.jpg',
+    '/images/ieeeday_event4.jpg',
+    '/images/ieeeday_event5.jpg',
+    '/images/ieeeday_event6.jpg',
+  ],
 
-cipherquest: [
-  '1550751827-4bd374c3f58b',
-  '1563986768609-322da13575f3',
-  '1573164713988-8665fc963095',
-  '1526374965328-7f61d4dc18c5',
-  '1531545514256-b1400bc00f31',
-  '1555949963-aa79dcee981c'
-],
+  cipherquest: [
+    '/images/cipherquest_event1.jpg',
+    '/images/cipherquest_event2.jpg',
+    '/images/cipherquest_event3.jpg',
+    '/images/cipherquest_event4.jpg',
+    '/images/cipherquest_event5.jpg',
+    '/images/cipherquest_event6.jpg',
+  ],
 
-aiethics: [
-  '1526378722484-bd91ca387e72',
-  '1511578314322-379afb476865',
-  '1587825140708-dfaf72ae4b04',
-  '1540575467063-178a50c2df87',
-  '1523240795612-9a054b0db644',
-  '1571260899304-425eee4c7efc'
-],
+  aiethics: [
+    '/images/aiethics_event1.jpg',
+    '/images/aiethics_event2.jpg',
+    '/images/aiethics_event3.jpg',
+    '/images/aiethics_event4.jpg',
+    '/images/aiethics_event5.jpg',
+    '/images/aiethics_event6.jpg',
+  ],
 };
 
 const upcomingData = [
@@ -340,8 +340,17 @@ const pastDataRaw = [
 ]; 
 
 const pastData = pastDataRaw.map((ev, i) => {
-    const pool = (POOLS[ev.id] || []).map((id) => U(id));
-    const e2 = { ...ev, isPast: true, img: pool[0], imgWide: U(POOLS[ev.id][0], 1600), pool, tiles: {} as any };
+    const pool = POOLS[ev.id] || [];
+
+    const e2 = {
+        ...ev,
+        isPast: true,
+        img: pool[0],
+        imgWide: pool[0],
+        pool,
+        tiles: {} as any
+    };
+
     e2.tiles = mkTiles(e2, i * 13 + 5);
     return e2;
 });
