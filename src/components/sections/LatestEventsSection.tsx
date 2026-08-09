@@ -25,7 +25,11 @@ const P = (seed: number, ev: any, n: number, ars?: string[]) => {
 };
 
 const mkTiles = (ev: any, s: number) => ({
-    photos: P(s, ev, 12),
+    photos: (ev.pool || []).map((img: string, i: number) => ({
+        id: `${ev.id}-photo-${i}`,
+        ar: ['3/4', '4/3', '1/1', '4/5', '3/4', '16/10'][i % 6],
+        img
+    })),
     videos: P(s + 3, ev, 3, ['16/10', '16/10', '16/10']),
     moments: P(s + 7, ev, 6),
     closing: P(s + 11, ev, 3, ['4/3', '4/3', '4/3']),
@@ -581,7 +585,7 @@ export default function LatestEventsRedesign() {
         .ieee-card-poster-panel { flex: 1 1 700px; min-width: min(320px, 100%); position: relative; min-height: 320px; overflow: hidden; }
 
         /* Responsive Modal Layout */
-        .ieee-modal-inner { position: relative; width: min(860px, 92vw); max-height: 88vh; overflow: hidden; display: flex; flex-direction: row; flex-wrap: wrap; }
+        .ieee-modal-inner { position: relative; width: min(1100px, 94vw); max-height: 88vh; overflow: hidden; display: flex; flex-direction: row; flex-wrap: wrap; }
         .ieee-modal-poster-panel { flex: 1 1 320px; min-width: min(280px, 100%); position: relative; min-height: 280px; overflow: hidden; }
         .ieee-modal-text-panel { flex: 0.4 1 340px; min-width: min(320px, 100%); max-height: 88vh; overflow-y: auto; padding: clamp(24px, 3.5vw, 48px); display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2; background: #0a0c10; scrollbar-width: thin; scrollbar-color: rgba(0,191,255,0.4) rgba(255,255,255,0.05); }
 
@@ -1060,7 +1064,7 @@ export default function LatestEventsRedesign() {
 
                             {/* Left Poster (Swapped) */}
                             <div className="ieee-modal-poster-panel">
-                                <Image key={modalHeroImg || activeModal.img} src={modalHeroImg || activeModal.img} alt={activeModal.name} fill unoptimized style={{ objectFit: "cover" }} />
+<Image key={modalHeroImg || activeModal.img} src={modalHeroImg || activeModal.img} alt={activeModal.name} fill unoptimized style={{ objectFit: "contain", background: "#05070a" }} />
 
                                 {/* Refined Smooth Blur Gradient */}
                                 <div className="ieee-modal-image-blend" style={{ position: "absolute", inset: 0, pointerEvents: "none" }}></div>
@@ -1103,7 +1107,7 @@ export default function LatestEventsRedesign() {
                                         <div style={{ marginTop: "6px" }}>
                                             <div style={{ fontSize: "11px", fontWeight: 700, color: "#6e7681", textTransform: "uppercase", letterSpacing: ".05em", marginBottom: "8px" }}>Gallery Preview</div>
                                             <div style={{ display: "flex", gap: "8px" }}>
-                                                {[activeModal.img, ...((activeModal as any).tiles?.photos?.map((t: any) => t.img) || [])].slice(0, 5).map((imgSrc: string, i: number) => {
+                                                {((activeModal as any).pool?.length ? (activeModal as any).pool : [activeModal.img]).map((imgSrc: string, i: number) => {
                                                     const isActive = modalHeroImg === imgSrc || (!modalHeroImg && i === 0);
                                                     return (
                                                         <button
