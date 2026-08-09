@@ -135,7 +135,7 @@ export default function Header() {
           <div className="flex items-center gap-4 z-10 shrink-0">
             <Button
               asChild
-              className="p-0 bg-transparent hover:bg-transparent shadow-none h-auto border-none hidden lg:inline flex"
+              className="p-0 bg-transparent hover:bg-transparent shadow-none h-auto border-none"
             >
               <motion.a
                 href={joinNowLink}
