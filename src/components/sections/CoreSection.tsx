@@ -247,7 +247,7 @@ const societies = [
       {
         name: "Riyansh Jain",
         role: "Secretary",
-        imageUrl: "/team/yashg.jpg",
+        imageUrl: "/team/Riyansh.jpg",",
         linkedinUrl: "https://www.linkedin.com/in/riyansh-jain-201796292/",
       },
     ],
