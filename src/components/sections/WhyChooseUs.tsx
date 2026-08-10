@@ -67,25 +67,25 @@ const features = [
     icon: Globe,
     title: "Global Recognition",
     description:
-      "Be a part of the world’s largest and most prestigious professional community for engineers, researchers, and innovators. With a presence in over 160 countries, IEEE opens the door to a global network of accomplished professionals, pioneering research, international collaborations, and opportunities that extend far beyond the classroom. At IEEE NSUT, you gain the platform, exposure, and connections to make your mark on a global stage.",
+      "Be part of IEEE, the world’s largest technical community, with access to a global network of professionals, researchers, and innovators. Explore opportunities that extend beyond the classroom and connect with a worldwide community.",
   },
   {
     icon: Rocket,
     title: "Professional Edge",
     description:
-  "Accelerate your professional journey through workshops, hackathons, certifications, internships, industry interactions, and networking opportunities. IEEE NSUT equips you with practical skills, valuable experiences, and lasting professional relationships to help you thrive in today’s competitive world. Through technical events, expert sessions, leadership opportunities, and hands-on projects, you gain exposure to real-world challenges while developing the confidence and expertise needed to build a successful career.",
+  "Gain practical skills and real-world exposure through workshops, hackathons, industry interactions, and expert sessions. Build experience, confidence, and connections that give you an edge in your career.",
   },
   {
     icon: Lightbulb,
     title: "Innovation-Driven Culture",
     description:
-      "Explore emerging technologies through hands-on projects, technical workshops, research initiatives, and expert-led sessions. IEEE NSUT cultivates a culture of innovation where curiosity, collaboration, and continuous learning empower you to transform ideas into real-world solutions.",
+      "Work on hands-on projects, explore emerging technologies, and collaborate with like-minded peers. Turn your ideas into impactful, real-world solutions while continuously learning and experimenting.",
   },
   {
     icon: Heart,
     title: "Friends and Connections for Life",
     description:
-      "Join a vibrant community of passionate students, accomplished alumni, and industry professionals who inspire and support one another. Build lasting friendships, expand your professional network, and create meaningful connections that continue to open doors throughout your academic and professional journey.",
+      "Join a supportive community of students, alumni, and professionals. Build lasting friendships, expand your network, and connect with people who inspire you throughout your academic and professional journey.",
   },
 ];
 
