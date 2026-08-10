@@ -120,7 +120,7 @@ const departmentHeads = {
         },
         {
           name: "Sidhant Choudhary",
-          imageUrl: "/team/pavni.jpg",
+          imageUrl: "/team/Sidhant.png",
           linkedinUrl: "https://www.linkedin.com/in/pavni-aggarwal-abjhbqja/",
         },
       ],
@@ -223,7 +223,7 @@ const societies = [
       {
         name: "Akansha Gupta",
         role: "Vice Chairperson",
-        imageUrl: "/team/khushneet.jpg",
+        imageUrl: "/team/Akansha.jpeg",
         linkedinUrl: "https://www.linkedin.com/in/akansha-gupta-1b672431b/",
       },
     ],
@@ -241,7 +241,7 @@ const societies = [
       {
         name: "Tijil Gupta",
         role: "Vice Chairperson",
-        imageUrl: "/team/aryan_b.jpg",
+        imageUrl: "/team/Tijil.jpg",
         linkedinUrl: "https://www.linkedin.com/in/tijil-gupta/",
       },
       {
@@ -298,7 +298,7 @@ const seniorMembers = {
     {
       name: "Shikha Verma",
       role: "Senior Executive",
-      imageUrl: "/team/dipshu.jpg",
+      imageUrl: "/team/Shikha.jpg",
       linkedinUrl:
         "https://www.linkedin.com/in/shikha-verma-431753342/",
     },
