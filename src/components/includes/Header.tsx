@@ -40,7 +40,7 @@ export default function Header() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.19, ease: "easeOut" }}
           className={cn(
-            "w-full max-w-8xl flex justify-between items-center px-12 py-4 rounded-[24px] transition-all duration-300",
+            "w-full max-w-8xl flex justify-between items-center px-8 py-4 rounded-[24px] bg-[#05070a]/95 transition-all duration-300",
             " backdrop-blur-xl",
             "border border-white/10 shadow-[0_0_40px_rgba(59,130,246,0.18),inset_0_1px_1px_rgba(255,255,255,0.15)]"
           )}
@@ -149,8 +149,8 @@ export default function Header() {
                   scale: 0.95,
                 }}
                 className={cn(
-  "hidden md:inline-flex items-center justify-center bg-white/[0.04] text-cyan-300 px-6 py-2.5 text-base font-semibold rounded-xl border border-cyan-400/40 shadow-[0_0_15px_rgba(34,211,238,0.12)] cursor-pointer",
-  "transition-all duration-300 relative overflow-hidden group hover:bg-cyan-400/10 hover:border-cyan-400 hover:text-white hover:shadow-[0_0_22px_rgba(34,211,238,0.25)]"
+  "hidden md:inline-flex items-center justify-center text-cyan-300 px-4 py-2 text-lg font-semibold cursor-pointer",
+  "transition-all duration-300 relative overflow-hidden group hover:text-white"
 )}
               >
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/10 to-white/0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
