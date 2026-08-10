@@ -80,12 +80,7 @@ const POOLS: Record<string, string[]> = {
   ],
 
   aiethics: [
-    '/images/aiethics_event1.jpg',
-    '/images/aiethics_event2.jpg',
-    '/images/aiethics_event3.jpg',
-    '/images/aiethics_event4.jpg',
-    '/images/aiethics_event5.jpg',
-    '/images/aiethics_event6.jpg',
+    '/images/IEEE NSUT Yearly Report (13).jpg',
   ],
 };
 
