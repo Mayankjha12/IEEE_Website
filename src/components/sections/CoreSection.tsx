@@ -121,7 +121,7 @@ const departmentHeads = {
         {
           name: "Sidhant Choudhary",
           imageUrl: "/team/Sidhant.png",
-          linkedinUrl: "https://www.linkedin.com/in/pavni-aggarwal-abjhbqja/",
+          linkedinUrl: "www.linkedin.com/in/sidhant-choudhary-298055417",
         },
       ],
     },
