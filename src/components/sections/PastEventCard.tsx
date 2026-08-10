@@ -103,7 +103,7 @@ const events: Event[] = [
   },
   {
     id: "2",
-    img: "/images/techweek.jpg",
+    img: "/images/TechWeek.jpeg",
     title: "TechWeek",
     desc: "Tech Week is IEEE NSUT's flagship cross-disciplinary technical initiative, featuring a week-long series of workshops, competitions, challenges, and events across diverse technology domains. Its flagship HackNSUT hackathon brings students together for an intensive collaborative innovation experience.",
     date: "2025",
