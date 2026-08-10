@@ -40,7 +40,7 @@ export default function Header() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.19, ease: "easeOut" }}
           className={cn(
-            "w-full max-w-8xl flex justify-between items-center px-8 py-4 rounded-[24px] transition-all duration-300",
+            "w-full max-w-8xl flex justify-between items-center px-12 py-4 rounded-[24px] transition-all duration-300",
             " backdrop-blur-xl",
             "border border-white/10 shadow-[0_0_40px_rgba(59,130,246,0.18),inset_0_1px_1px_rgba(255,255,255,0.15)]"
           )}
