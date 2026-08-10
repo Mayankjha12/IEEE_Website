@@ -73,7 +73,7 @@ const features = [
     icon: Rocket,
     title: "Professional Edge",
     description:
-  "Accelerate your professional journey through workshops, hackathons, certifications, internships, industry interactions, and networking opportunities. IEEE NSUT equips you with practical skills, valuable experiences, and lasting professional relationships to help you thrive in today’s competitive world. Through technical events, expert sessions, leadership opportunities, and hands-on projects, you gain exposure to real-world challenges while developing the confidence and expertise needed to build a successful career. Connect with industry professionals, collaborate with talented peers, and create opportunities that extend far beyond the classroom.",
+  "Accelerate your professional journey through workshops, hackathons, certifications, internships, industry interactions, and networking opportunities. IEEE NSUT equips you with practical skills, valuable experiences, and lasting professional relationships to help you thrive in today’s competitive world. Through technical events, expert sessions, leadership opportunities, and hands-on projects, you gain exposure to real-world challenges while developing the confidence and expertise needed to build a successful career.",
   },
   {
     icon: Lightbulb,
