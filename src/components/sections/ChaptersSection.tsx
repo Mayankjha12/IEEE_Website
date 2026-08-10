@@ -51,7 +51,7 @@ const activities = [
     description:
       "The IEEE Computer Society Chapter is driving the next wave of computing through collaboration, code, and creativity.",
     logoUrl:
-      "https://www.ieeecsvit.com/static/darklogo-0604a0fe26f4c4783ef9e27819e9bb25.png",
+      "/images/computer_society.jpeg",
   },
   {
     id: 5,
