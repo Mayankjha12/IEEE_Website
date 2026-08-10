@@ -217,7 +217,7 @@ const societies = [
       {
         name: "Vanshika Joras",
         role: "Chairperson",
-        imageUrl: "/team/shriya.jpeg",
+        imageUrl: "/team/Vanshika_Joras.jpeg",
         linkedinUrl: "https://www.linkedin.com/in/vanshika-joras-703949323/"
       },
       {
@@ -305,7 +305,7 @@ const seniorMembers = {
     {
       name: "Himanshi Meena",
       role: "Senior Executive",
-      imageUrl: "/team/hardik.jpg",
+      imageUrl: "/team/Himanshi.jpg",
       linkedinUrl: "https://www.linkedin.com/in/himanshi-meena-623a37342/",
     },
     {
