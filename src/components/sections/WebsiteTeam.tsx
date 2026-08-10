@@ -7,20 +7,26 @@ const seniorHeads = [
   {
     name: "Mayank Kumar Jha",
     img: "/team/mayank.jpeg",
-    linkedinUrl: "https://www.linkedin.com/in/bhuwan-chandra-pandey/",
+    linkedinUrl: "https://www.linkedin.com/in/mayank-kumar-jha-6b4658328/",
+    role : "Head of Technology",
+  },
+  {
+    name: "Shubham Khatri",
+    img: "/team/shubham.jpeg",
+    linkedinUrl: "https://www.linkedin.com/in/shubham3155/",
     role : "Head of Technology",
   },
   {
     name: "Aarohi Jain",
     img: "/team/Aarohi.jpg",
-    linkedinUrl: "https://www.linkedin.com/in/shubham-t1920/",
+    linkedinUrl: "https://www.linkedin.com/in/aarohi-jain-415945326/",
     role: "General Secretary",
   },
   {
     name: "Hemang Bhat",
     img: "/team/Hemang_Bhat.jpeg",
-    linkedinUrl: "https://www.linkedin.com/in/shubham-t1920/",
-    role: "General Secretary",
+    linkedinUrl: "https://www.linkedin.com/in/hemangbhat/",
+    role: "Vice President",
   },
 ];
 
@@ -53,7 +59,7 @@ const execommsMembers = [
   {
     name: "Tanmay",
     role: "Execomm",
-    img: "/team/Tanmay.jpg",
+    img: "/team/Tanmay_M.jpg",
   },
   {
     name: "Sheel Rana",
