@@ -13,7 +13,7 @@ import {
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-export const whatsAppLink = "https://chat.whatsapp.com/E1MfsiHEDGl7cgwumScIHA";
+export const whatsAppLink = "https://chat.whatsapp.com/BBexruFKnb94RBG5PBIliE?mode=gi_t";
 
 const usefulLinksData = [
   { href: "https://www.ieee.org/", label: "IEEE.org", icon: FaGlobe },
