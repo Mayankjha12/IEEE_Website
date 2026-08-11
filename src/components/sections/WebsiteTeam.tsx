@@ -166,6 +166,81 @@ const execommsMembers = [
     role: "Execomm",
     img: "/team/Yashita.jpeg",
   },
+  {
+  name: "Abhimanyu Sharma",
+  role: "Execomm",
+  img: "/team/Abhimanyu Sharma.jpg",
+},
+{
+  name: "Alok Mourya",
+  role: "Execomm",
+  img: "/team/Alok Mourya.jpg",
+},
+{
+  name: "Aryan Sahu",
+  role: "Execomm",
+  img: "/team/Aryan Sahu.jpg",
+},
+{
+  name: "Harshita",
+  role: "Execomm",
+  img: "/team/Harshita.jpg",
+},
+{
+  name: "Kartik Bansal",
+  role: "Execomm",
+  img: "/team/Kartik Bansal.jpg",
+},
+{
+  name: "Lavya",
+  role: "Execomm",
+  img: "/team/Lavya.jpg",
+},
+{
+  name: "Mansaran Kaur",
+  role: "Execomm",
+  img: "/team/Mansaran Kaur.jpg",
+},
+{
+  name: "Navani Smiju",
+  role: "Execomm",
+  img: "/team/Navani Smiju.jpg",
+},
+{
+  name: "Parth Goel",
+  role: "Execomm",
+  img: "/team/Parth Goel.jpg",
+},
+{
+  name: "Pulkit Singh",
+  role: "Execomm",
+  img: "/team/Pulkit Singh.jpg",
+},
+{
+  name: "Rajeev Kumar",
+  role: "Execomm",
+  img: "/team/Rajeev Kumar.jpg",
+},
+{
+  name: "Shourya",
+  role: "Execomm",
+  img: "/team/Shourya.jpg",
+},
+{
+  name: "Suraj Kumar",
+  role: "Execomm",
+  img: "/team/Suraj Kumar.jpg",
+},
+{
+  name: "Vishal Singh",
+  role: "Execomm",
+  img: "/team/Vishal Singh.jpg",
+},
+{
+  name: "Yash Khar",
+  role: "Execomm",
+  img: "/team/Yash Khar.jpg",
+},
 ];
 
 const TechHeadCard = ({
