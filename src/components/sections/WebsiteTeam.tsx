@@ -194,12 +194,12 @@ const execommsMembers = [
 {
   name: "Lavya",
   role: "Execomm",
-  img: "/team/Lavya.jpg",
+  img: "/team/Lavya.jpeg",
 },
 {
   name: "Mansaran Kaur",
   role: "Execomm",
-  img: "/team/Mansaran Kaur.jpeg",
+  img: "/team/Mansaran Kaur.jpg",
 },
 {
   name: "Navani Smiju",
