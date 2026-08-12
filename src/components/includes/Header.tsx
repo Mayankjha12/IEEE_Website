@@ -10,7 +10,6 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 
-export const joinNowLink = "https://docs.google.com/forms/d/e/1FAIpQLScqFjGM-Wm7sQPCdjc7n4SRokKWRUHzYh_7rubpiMV5m-W_ig/viewform";
 
 const tabs = [
   { label: "Home", target: "home", href: "/" },
@@ -133,30 +132,7 @@ export default function Header() {
 
           {/* Action CTA & Mobile Trigger */}
           <div className="flex items-center gap-4 z-10 shrink-0">
-            <Button
-              asChild
-              className="p-0 bg-transparent hover:bg-transparent shadow-none h-auto border-none"
-            >
-              <motion.a
-                href={joinNowLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0 0 20px rgba(14,165,233,.45)",
-                }}
-                whileTap={{
-                  scale: 0.95,
-                }}
-                className={cn(
-  "hidden md:inline-flex items-center justify-center text-cyan-300 px-4 py-2 text-lg font-semibold cursor-pointer",
-  "transition-all duration-300 relative overflow-hidden group hover:text-white"
-)}
-              >
-                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/10 to-white/0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
-                Join Now
-              </motion.a>
-            </Button>
+            
 
             {/* Glass Mobile Hamburger */}
             <motion.div
