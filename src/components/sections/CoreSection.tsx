@@ -305,7 +305,7 @@ const seniorMembers = {
     {
       name: "Himanshi Meena",
       role: "Senior Executive",
-      imageUrl: "/team/Himanshi.jpeg",
+      imageUrl: "/team/Himanshi.jpg",
       linkedinUrl: "https://www.linkedin.com/in/himanshi-meena-623a37342/",
     },
     {
