@@ -102,29 +102,29 @@ export default function HeroBanner() {
           an impact.
         </motion.p>
 
-        {/* Download App Button */}
-        <MotionButton
-          asChild
-          initial={{ opacity: 0, y: 25 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1 }}
-          whileHover={{
-            scale: 1.05,
-            boxShadow: "0 0 25px rgba(14,165,233,.45)",
-          }}
-          whileTap={{ scale: 0.96 }}
-          className="mt-5 rounded-full bg-sky-500 px-6 py-3 text-base font-extrabold text-white transition-all duration-300 hover:bg-sky-600"
-        >
-          <a
-            href="https://industrial-ideathon-vjo4um39jvw5x7x.s3.us-east-1.amazonaws.com/statics/IEEE-NSUT-App-beta.apk"
-            download="IEEE-NSUT-App.apk"
-          >
-            <span className="font-extrabold">
-              Download the IEEE NSUT App
-            </span>
-          </a>
-        </MotionButton>
-
+        {/* Join Now Button */}
+<MotionButton
+  asChild
+  initial={{ opacity: 0, y: 25 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 1 }}
+  whileHover={{
+    scale: 1.05,
+    boxShadow: "0 0 25px rgba(14,165,233,.45)",
+  }}
+  whileTap={{ scale: 0.96 }}
+  className="mt-5 rounded-full bg-sky-500 px-6 py-3 text-base font-extrabold text-white transition-all duration-300 hover:bg-sky-600"
+>
+  <a
+    href="https://docs.google.com/forms/d/17ZcW6P3VcvIVJVE7wZ2gm27nOxeUGoBay1U0vx9KR0E/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <span className="font-extrabold">
+      Join Now
+    </span>
+  </a>
+</MotionButton>
         <motion.div
   ref={imageContainerRef}
   initial={{
