@@ -94,7 +94,7 @@ const execommsMembers = [
   {
     name: "Khushi Shrivastava",
     role: "Execomm",
-    img: "/team/Khushi_Shrivastava.jpeg",
+    img: "/team/Khushi_Shrivastava.jpg",
   },
   {
     name: "Kritika Madan",
@@ -194,12 +194,12 @@ const execommsMembers = [
 {
   name: "Lavya",
   role: "Execomm",
-  img: "/team/Lavya.jpeg",
+  img: "/team/Lavya.jpg",
 },
 {
   name: "Mansaran Kaur",
   role: "Execomm",
-  img: "/team/Mansaran Kaur.jpeg",
+  img: "/team/Mansaran Kaur.jpg",
 },
 {
   name: "Navani Smiju",
