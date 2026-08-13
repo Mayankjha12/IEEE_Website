@@ -94,7 +94,7 @@ const execommsMembers = [
   {
     name: "Khushi Shrivastava",
     role: "Execomm",
-    img: "/team/Khushi_Shrivastava.jpg",
+    img: "/team/Khushi_Shrivastava.jpeg",
   },
   {
     name: "Kritika Madan",
@@ -119,7 +119,7 @@ const execommsMembers = [
   {
     name: "Nishka Choudhury",
     role: "Execomm",
-    img: "/team/Nishka_Choudhury.jpg",
+    img: "/team/Nishka_Choudhury.jpeg",
   },
   {
     name: "Niyati Katiyan",
@@ -199,7 +199,7 @@ const execommsMembers = [
 {
   name: "Mansaran Kaur",
   role: "Execomm",
-  img: "/team/Mansaran Kaur.jpg",
+  img: "/team/Mansaran Kaur.jpeg",
 },
 {
   name: "Navani Smiju",
@@ -209,12 +209,12 @@ const execommsMembers = [
 {
   name: "Parth Goel",
   role: "Execomm",
-  img: "/team/Parth Goel.jpg",
+  img: "/team/Parth Goel.jpeg",
 },
 {
   name: "Pulkit Singh",
   role: "Execomm",
-  img: "/team/Pulkit Singh.jpg",
+  img: "/team/Pulkit Singh.jpeg",
 },
 {
   name: "Rajeev Kumar",
@@ -237,7 +237,7 @@ const execommsMembers = [
   img: "/team/VISHAL SINGH.jpg",
 },
 {
-  name: "Yash Khar",
+  name: "Yash Jakhar",
   role: "Execomm",
   img: "/team/Yash Jakhar.jpeg",
 },
