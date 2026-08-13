@@ -94,7 +94,7 @@ const execommsMembers = [
   {
     name: "Khushi Shrivastava",
     role: "Execomm",
-    img: "/team/Khushi_Shrivastava.jpg",
+    img: "/team/Khushi_Shrivastava (1).jpg",
   },
   {
     name: "Kritika Madan",
