@@ -84,7 +84,27 @@ function FlipCard({
           <span className="mt-6 text-sm font-semibold text-cyan-300">
             {person.name}
           </span>
-          <span className="mt-1 text-xs text-white/50">{person.role}</span>
+          {/* BACK FACE */}
+<div className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl border border-cyan-400/30 bg-gradient-to-br from-[#0c1424] to-[#0f1b30] p-8 text-center text-white shadow-lg [backface-visibility:hidden] [transform:rotateY(180deg)]">
+  <p className="text-base md:text-lg font-medium leading-relaxed">
+    &ldquo;{person.quote}&rdquo;
+  </p>
+
+  <span className="mt-6 text-sm font-semibold text-cyan-300">
+    {person.name}
+  </span>
+
+  <div className="mt-2 flex flex-col items-center gap-1">
+    {person.roles.map((role) => (
+      <span
+        key={role}
+        className="text-xs text-white/50"
+      >
+        {role}
+      </span>
+    ))}
+  </div>
+</div>
         </div>
       </div>
     </motion.div>
