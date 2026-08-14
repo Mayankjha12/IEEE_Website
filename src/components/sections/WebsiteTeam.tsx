@@ -209,7 +209,7 @@ const execommsMembers = [
 {
   name: "Parth Goel",
   role: "Execomm",
-  img: "/team/Parth Goel.jpg",
+  img: "/team/Parth Goel.jpeg",
 },
 {
   name: "Pulkit Singh",
@@ -239,7 +239,7 @@ const execommsMembers = [
 {
   name: "Yash Jakhar",
   role: "Execomm",
-  img: "/team/Yash Jakhar.jpg",
+  img: "/team/Yash Jakhar.jpeg",
 },
 ];
 
