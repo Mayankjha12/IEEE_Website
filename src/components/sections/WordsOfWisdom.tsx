@@ -9,8 +9,13 @@ import { Heading, Paragraph } from "../includes/TypoGraphy";
 // imageUrl should point to a file inside the /public/images folder.
 const wordsOfWisdom = [
   {
-    name: "Dr. Prerna Gaur",
-    role: "Faculty Advisor",
+    name: "Prof. Prerna Gaur",
+    roles: [
+      "Branch Counselor",
+      "Chair, IEEE India Council",
+      "Dean Faculty, Electrical and Mechanical Engineering Dept.",
+      "Faculty-In Charge, IEEE NSUT",
+    ],
     quote: "The only way to do great work is to love what you do.",
     imageUrl: "/images/prerna_gaur.jpg",
   },
@@ -56,9 +61,16 @@ function FlipCard({
           </div>
 
           <h3 className="text-lg md:text-xl font-semibold">{person.name}</h3>
-          <span className="mt-2 rounded-full border border-cyan-400/30 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-cyan-300">
-            {person.role}
-          </span>
+          <div className="mt-3 flex flex-col items-center gap-1 text-center">
+  {person.roles.map((role) => (
+    <span
+      key={role}
+      className="text-xs md:text-sm text-cyan-300 font-medium"
+    >
+      {role}
+    </span>
+  ))}
+</div>
           <span className="mt-auto flex items-center gap-1.5 pt-4 font-mono text-[10px] uppercase tracking-widest text-white/30">
             hover to flip
           </span>
