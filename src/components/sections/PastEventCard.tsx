@@ -87,7 +87,7 @@ interface Event {
 const events: Event[] = [
   {
     id: "1",
-    img: "/images/tensymp1.jpg",
+    img: "/images/tensymp.png",
     title: "Tensymp'24",
     desc: "IEEE TENSYMP'24 is a premier international conference co-hosted by NSUT, bringing together researchers, academicians, industry professionals, and students from around the world to present research, exchange ideas, and explore emerging technologies.",
     date: "2024",
