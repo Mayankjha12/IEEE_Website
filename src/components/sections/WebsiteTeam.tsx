@@ -119,7 +119,7 @@ const execommsMembers = [
   {
     name: "Nishka Choudhury",
     role: "Execomm",
-    img: "/team/Nishka_Choudhury (1).jpg",
+    img: "/team/Nishka_Choudhury.jpg",
   },
   {
     name: "Niyati Katiyan",
@@ -209,7 +209,7 @@ const execommsMembers = [
 {
   name: "Parth Goel",
   role: "Execomm",
-  img: "/team/Parth Goel.jpeg",
+  img: "/team/Parth Goel.jpg",
 },
 {
   name: "Pulkit Singh",
@@ -239,7 +239,7 @@ const execommsMembers = [
 {
   name: "Yash Jakhar",
   role: "Execomm",
-  img: "/team/Yash Jakhar.jpeg",
+  img: "/team/Yash Jakhar.jpg",
 },
 ];
 
