@@ -5,7 +5,7 @@ import Image from "next/image";
 import { TextRise } from "../custom/TextRise";
 import { Heading, Paragraph } from "../includes/TypoGraphy";
 
-// Add / edit mentors here. Each entry becomes one flip card.
+// Add / edit mentors here.
 // imageUrl should point to a file inside the /public/images folder.
 const wordsOfWisdom = [
   {
@@ -38,17 +38,19 @@ function FlipCard({
         ease: [0.25, 0.8, 0.25, 1],
       }}
       viewport={{ once: true }}
-      className="group h-[380px] w-full [perspective:1400px]"
+      className="group h-[380px] w-full max-w-[450px] [perspective:1400px]"
     >
       <div className="relative h-full w-full rounded-2xl transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-        {/* FRONT FACE */}
+
+        {/* ================= FRONT FACE ================= */}
         <div className="absolute inset-0 flex flex-col items-center rounded-2xl border border-cyan-400/20 bg-gradient-to-br from-white/5 to-white/[0.02] p-6 text-center text-white shadow-lg backdrop-blur [backface-visibility:hidden]">
-          {/* decorative background quote mark */}
+
+          {/* Decorative quote mark */}
           <span className="pointer-events-none absolute left-4 top-2 select-none font-serif text-8xl leading-none text-cyan-400/10">
             &ldquo;
           </span>
 
-          {/* spinning gradient ring around avatar */}
+          {/* Avatar */}
           <div className="relative mt-2 mb-4 size-32 rounded-full p-[3px] [background:conic-gradient(from_0deg,#22d3ee,#3b82f6,#818cf8,#22d3ee)] group-hover:[animation:wow-spin_6s_linear_infinite]">
             <div className="relative size-full overflow-hidden rounded-full bg-black">
               <Image
@@ -60,52 +62,55 @@ function FlipCard({
             </div>
           </div>
 
-          <h3 className="text-lg md:text-xl font-semibold">{person.name}</h3>
+          {/* Name */}
+          <h3 className="text-lg font-semibold md:text-xl">
+            {person.name}
+          </h3>
+
+          {/* Positions */}
           <div className="mt-3 flex flex-col items-center gap-1 text-center">
-  {person.roles.map((role) => (
-    <span
-      key={role}
-      className="text-xs md:text-sm text-cyan-300 font-medium"
-    >
-      {role}
-    </span>
-  ))}
-</div>
+            {person.roles.map((role) => (
+              <span
+                key={role}
+                className="text-xs font-medium text-cyan-300 md:text-sm"
+              >
+                {role}
+              </span>
+            ))}
+          </div>
+
+          {/* Flip hint */}
           <span className="mt-auto flex items-center gap-1.5 pt-4 font-mono text-[10px] uppercase tracking-widest text-white/30">
             hover to flip
           </span>
         </div>
 
-        {/* BACK FACE */}
+        {/* ================= BACK FACE ================= */}
         <div className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl border border-cyan-400/30 bg-gradient-to-br from-[#0c1424] to-[#0f1b30] p-8 text-center text-white shadow-lg [backface-visibility:hidden] [transform:rotateY(180deg)]">
-          <p className="text-base md:text-lg font-medium leading-relaxed">
+
+          {/* Quote */}
+          <p className="text-base font-medium leading-relaxed md:text-lg">
             &ldquo;{person.quote}&rdquo;
           </p>
+
+          {/* Name */}
           <span className="mt-6 text-sm font-semibold text-cyan-300">
             {person.name}
           </span>
-          {/* BACK FACE */}
-<div className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl border border-cyan-400/30 bg-gradient-to-br from-[#0c1424] to-[#0f1b30] p-8 text-center text-white shadow-lg [backface-visibility:hidden] [transform:rotateY(180deg)]">
-  <p className="text-base md:text-lg font-medium leading-relaxed">
-    &ldquo;{person.quote}&rdquo;
-  </p>
 
-  <span className="mt-6 text-sm font-semibold text-cyan-300">
-    {person.name}
-  </span>
-
-  <div className="mt-2 flex flex-col items-center gap-1">
-    {person.roles.map((role) => (
-      <span
-        key={role}
-        className="text-xs text-white/50"
-      >
-        {role}
-      </span>
-    ))}
-  </div>
-</div>
+          {/* Positions */}
+          <div className="mt-2 flex flex-col items-center gap-1">
+            {person.roles.map((role) => (
+              <span
+                key={role}
+                className="text-xs text-white/50"
+              >
+                {role}
+              </span>
+            ))}
+          </div>
         </div>
+
       </div>
     </motion.div>
   );
@@ -114,7 +119,8 @@ function FlipCard({
 export default function WordsOfWisdom() {
   return (
     <section className="relative overflow-hidden bg-black px-4 py-16 md:px-8">
-      {/* dot-grid background */}
+
+      {/* Dot-grid background */}
       <div
         className="pointer-events-none absolute inset-0 opacity-40"
         style={{
@@ -129,18 +135,29 @@ export default function WordsOfWisdom() {
       />
 
       <div className="relative z-10 mx-auto max-w-6xl">
+
+        {/* Heading */}
         <div className="mb-10 flex flex-col items-center md:mb-14">
           <Heading>
             <TextRise text="Words of Wisdom" perWord />
           </Heading>
-          <Paragraph>Insights and advice from notable individuals.</Paragraph>
+
+          <Paragraph>
+            Insights and advice from notable individuals.
+          </Paragraph>
         </div>
 
-        <div className="flex justify-center max-w-4xl mx-auto">
+        {/* Centered Card */}
+        <div className="flex justify-center">
           {wordsOfWisdom.map((person, idx) => (
-            <FlipCard key={person.name} person={person} index={idx} />
+            <FlipCard
+              key={person.name}
+              person={person}
+              index={idx}
+            />
           ))}
         </div>
+
       </div>
     </section>
   );
