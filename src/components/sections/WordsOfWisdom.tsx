@@ -14,13 +14,6 @@ const wordsOfWisdom = [
     quote: "The only way to do great work is to love what you do.",
     imageUrl: "/images/prerna_gaur.jpg",
   },
-  {
-    name: "Dr. Anuradha Tomar",
-    role: "Chapter Mentor",
-    quote:
-      "Success usually comes to those who are too busy to be looking for it.",
-    imageUrl: "/images/anuradha_tomar.jpeg",
-  },
 ];
 
 function FlipCard({
@@ -111,7 +104,7 @@ export default function WordsOfWisdom() {
           <Paragraph>Insights and advice from notable individuals.</Paragraph>
         </div>
 
-        <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 max-w-4xl mx-auto">
+        <div className="flex justify-center max-w-4xl mx-auto">
           {wordsOfWisdom.map((person, idx) => (
             <FlipCard key={person.name} person={person} index={idx} />
           ))}
