@@ -119,7 +119,7 @@ const execommsMembers = [
   {
     name: "Nishka Choudhury",
     role: "Execomm",
-    img: "/team/Nishka_Choudhury.jpg",
+    img: "/team/Nishka_Choudhury.jpeg",
   },
   {
     name: "Niyati Katiyan",
